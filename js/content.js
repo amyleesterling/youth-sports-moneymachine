@@ -53,7 +53,11 @@
     { org: 'Elk River Youth Hockey (MN, community assoc.)', metric: 'Squirt registration (fee structure changed across years)', first: '$1,325 (2018-19)', latest: '$1,000 (2024-25)', nominal: '−25%', cpi: 'CPI +24.9% (2018–24)', verdict: 'Deep real decline', src: 'fee_dataset' },
     { org: 'KC Cheer (KS, all-star gym)', metric: 'Top-team monthly tuition', first: '$220/mo (2019-20)', latest: '$235/mo (2022-23)', nominal: '+6.8%', cpi: 'CPI +14.5% (2019–22)', verdict: 'Below inflation (booster dues flat into 2025-26)', src: 'fee_dataset' },
     { org: 'Nashville Youth Hockey League (TN, house)', metric: '8U house-league season', first: '$750 (2022-23)', latest: '$1,000 (2025-26)', nominal: '+33%', cpi: 'CPI +10.0% (2022–25)', verdict: 'Well above inflation', src: 'fee_dataset' },
-    { org: 'Utah Surf SC (soccer club)', metric: 'U13-14 club-fee floor', first: '$1,095 (2024-25)', latest: '$1,575 (2025-26)', nominal: '+44% in one year', cpi: 'CPI +2.6% (2024–25)', verdict: 'Far above inflation', src: 'fee_dataset' }
+    { org: 'Utah Surf SC (soccer club)', metric: 'U13-14 club-fee floor', first: '$1,095 (2024-25)', latest: '$1,575 (2025-26)', nominal: '+44% in one year', cpi: 'CPI +2.6% (2024–25)', verdict: 'Far above inflation', src: 'fee_dataset' },
+    { org: 'Sideout Sports (NJ volleyball)', metric: 'National-team monthly dues', first: '$458/mo (2022-23)', latest: '$581/mo (2025-26)', nominal: '+27%', cpi: 'CPI +10.0% (2022–25)', verdict: 'Well above inflation', src: 'fee_dataset' },
+    { org: 'La Roca FC (UT soccer)', metric: 'Girls ECNL registration', first: '$3,560 (2020-21)', latest: '$3,900 (2023-24)', nominal: '+9.6%', cpi: 'CPI +17.7% (2020–23)', verdict: 'Below inflation', src: 'fee_dataset' },
+    { org: '256 Lacrosse Club (AL)', metric: 'Summer club fee (org publishes its own history)', first: '$650 (2022–24, flat)', latest: '$750 (2025)', nominal: '+15%', cpi: 'CPI +10.0% (2022–25)', verdict: 'Slightly above inflation', src: 'fee_dataset' },
+    { org: 'Varsity — The Summit (KKR-owned)', metric: 'Mandatory hotel package, quad 4-night', first: '$853 (2023)', latest: '$940 (2025)', nominal: '+10.2%', cpi: 'CPI +5.7% (2023–25)', verdict: 'Above inflation', src: 'fee_dataset' }
   ];
 
   (function historySection() {

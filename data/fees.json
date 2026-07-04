@@ -3627,6 +3627,97 @@
    "covers": "stated +4% vs 2021-22; +$200/family fundraising",
    "url": "https://www.gomotionapp.com/ncmac/UserFiles/File/swimmac-registration-packet-for-returning-families-2022-2023-final_057359.pdf",
    "note": "HISTORICAL: org's own +4% YoY statement"
+  },
+  {
+   "sport": "volleyball",
+   "org": "Sideout Sports",
+   "loc": "Fairfield, NJ",
+   "tier": "comp",
+   "program": "National team 15U-17U",
+   "season": "2022-23",
+   "amount": 458,
+   "period": "month",
+   "covers": "Aug-May; travel team $340/mo",
+   "url": "https://sosvolleyball.com/page/show/5065904-2022-2023-club-costs",
+   "note": "HISTORICAL PAIR: +27% by 2025-26"
+  },
+  {
+   "sport": "cheer",
+   "org": "Varsity \u2014 The Summit",
+   "loc": "Orlando, FL",
+   "tier": "comp",
+   "program": "Hotel package, quad 4-night (per person)",
+   "season": "2025",
+   "amount": 940,
+   "period": "event",
+   "covers": "triple $1,004, double $1,164; +10.2% vs 2023",
+   "url": "https://www.varsity.com/wp-content/uploads/2024/08/VAS-1225-2408-EOS_Summit_PricingSheet-MiscDigital-v12.pdf",
+   "note": "HISTORICAL PAIR w/ 2023 $853; Varsity (KKR-owned)"
+  },
+  {
+   "sport": "soccer",
+   "org": "La Roca FC",
+   "loc": "South Weber, UT",
+   "tier": "comp",
+   "program": "ECNL girls U14-U18/19",
+   "season": "2023-24",
+   "amount": 3900,
+   "period": "year",
+   "covers": "U13 split $3,400; +9.6% vs 2020-21 = below inflation",
+   "url": "https://larocafc.com/wp-content/uploads/2023/05/ECNL-23-24-Fees-for-the-Website.pdf",
+   "note": "HISTORICAL PAIR w/ 2020-21 $3,560"
+  },
+  {
+   "sport": "soccer",
+   "org": "Charlotte Soccer Academy",
+   "loc": "Charlotte, NC",
+   "tier": "comp",
+   "program": "ECNL-RL / Elite 64 U13-U14",
+   "season": "2023-24",
+   "amount": 3150,
+   "period": "year",
+   "covers": "NPL U15-U19 $2,775",
+   "url": "https://dt5602vnjxv0c.cloudfront.net/portals/5464/docs/2023-2024/fees/2023%202024%20rl%20dpl%20e64%20npl%20program%20fee%20chart.pdf",
+   "note": ""
+  },
+  {
+   "sport": "lacrosse",
+   "org": "256 Lacrosse Club",
+   "loc": "Alabama",
+   "tier": "comp",
+   "program": "Summer club player fee",
+   "season": "2022",
+   "amount": 650,
+   "period": "season",
+   "covers": "org's own published history: $650 in 2022, 2023, 2024",
+   "url": "https://256lacrosseclub.com/program/tryouts-for-summer-2026/23479",
+   "note": "HISTORICAL SERIES from org's own page"
+  },
+  {
+   "sport": "lacrosse",
+   "org": "256 Lacrosse Club",
+   "loc": "Alabama",
+   "tier": "comp",
+   "program": "Summer club player fee",
+   "season": "2025",
+   "amount": 750,
+   "period": "season",
+   "covers": "2026: $750 + $100 player pack; flat 2022-24 then +15%",
+   "url": "https://256lacrosseclub.com/program/2025-summer-tryouts/11385",
+   "note": "HISTORICAL SERIES"
+  },
+  {
+   "sport": "gymnastics",
+   "org": "Winchester Gymnastics Academy",
+   "loc": "Winchester, MA",
+   "tier": "comp",
+   "program": "Xcel Bronze team tuition",
+   "season": "2026-27",
+   "amount": 350,
+   "period": "month",
+   "covers": "+$100/yr gym show fee; competition leotard $250; meet fees not yet billed",
+   "url": "https://winchestergymnasticsacademy.com/competitive",
+   "note": "parent-reported (reader-contributed, June 2026 statement); amounts not on gym's public site"
   }
  ]
 }
