@@ -122,7 +122,7 @@
         scales: {
           x: {
             type: 'logarithmic',
-            min: 40,
+            min: 20,
             grid: { color: t.grid, lineWidth: 1, drawTicks: false },
             border: { display: false },
             ticks: {

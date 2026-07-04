@@ -32,7 +32,7 @@ const feesPath = path.join(root, 'data/fees.json');
 if (fs.existsSync(feesPath)) {
   fees = JSON.parse(fs.readFileSync(feesPath, 'utf8'));
   fees.org_count = new Set(fees.rows.map(r => r.org)).size;
-  const badRows = fees.rows.filter(r => !r.org || !r.url || !(r.amount > 0) || !r.sport || !r.season);
+  const badRows = fees.rows.filter(r => !r.org || !r.url || !(r.amount >= 0) || !r.sport || !r.season);
   if (badRows.length) {
     console.error('fees.json rows missing required fields:', JSON.stringify(badRows.slice(0, 3)));
     process.exit(1);
