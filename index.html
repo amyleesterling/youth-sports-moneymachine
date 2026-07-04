@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Youth Sports Money Machine — is it really outrunning inflation?</title>
+<meta name="description" content="A sport-by-sport look at what US families actually pay for club and travel youth sports, adjusted for inflation, with private-equity acquisition timelines overlaid.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <button id="theme-toggle" class="theme-toggle" type="button">☾ Dark mode</button>
+  <p class="kicker">A data investigation</p>
+  <h1>The youth sports money machine</h1>
+  <p class="dek">Everyone "knows" travel sports costs are exploding, and the favorite villain is
+    private equity. This page tests that story against the actual price data, sport by sport —
+    in constant dollars, with the acquisition dates drawn on the charts so you can judge for yourself.</p>
+  <p class="byline" id="byline">All figures independently sourced; every number is footnoted. Where the data doesn't exist, we say so instead of interpolating.</p>
+</header>
+
+<div class="stat-row" id="stat-row">
+  <div class="stat-tile">
+    <p class="label">Avg. spend per child, per sport — 2019</p>
+    <div class="value" id="stat-2019">—</div>
+    <p class="note">Aspen Institute / Utah State survey <a class="footnote-ref" href="#src-aspen2019">[src]</a></p>
+  </div>
+  <div class="stat-tile">
+    <p class="label">Avg. spend per child, per sport — 2024</p>
+    <div class="value" id="stat-2024">—</div>
+    <p class="note">Same survey series, 2024 wave <a class="footnote-ref" href="#src-aspen2024">[src]</a></p>
+  </div>
+  <div class="stat-tile">
+    <p class="label">Nominal increase 2019 → 2024</p>
+    <div class="value" id="stat-nominal">—</div>
+    <p class="note">vs <span id="stat-cpi">—</span> CPI over the same window</p>
+  </div>
+  <div class="stat-tile">
+    <p class="label">Real increase (inflation-adjusted)</p>
+    <div class="value" id="stat-real">—</div>
+    <p class="note">The part inflation can't explain</p>
+  </div>
+</div>
+
+<section id="sport-by-sport">
+  <h2>Sport by sport</h2>
+  <p class="section-intro" id="grid-intro">Each chart shows average annual family spending per child
+    in that sport, from parent surveys — <strong>nominal</strong> (light) and in
+    <strong>constant 2025 dollars</strong> (dark). If the dark line is flat, inflation explains the increase.
+    Vertical ticks mark private-equity and ownership events in that sport. Badges rate how much
+    data actually exists — a lot of the loudest claims rest on the thinnest series.</p>
+  <div class="controls">
+    <div class="seg" id="scale-toggle" role="group" aria-label="Y-axis scale">
+      <button type="button" data-scale="indep" aria-pressed="true">Per-sport scale</button>
+      <button type="button" data-scale="same" aria-pressed="false">Same scale</button>
+    </div>
+    <span class="hint">Same scale makes cross-sport comparison honest; per-sport scale shows each trend's shape.</span>
+  </div>
+  <div class="legend">
+    <span class="item"><span class="key real"></span>Real (2025 $)</span>
+    <span class="item"><span class="key nominal"></span>Nominal $</span>
+    <span class="item"><span class="key pe"></span>PE / ownership event</span>
+  </div>
+  <div class="grid" id="sports-grid"></div>
+</section>
+
+<section id="combined">
+  <h2>All sports vs inflation, one frame</h2>
+  <p class="section-intro">Every sport's survey series indexed to 100 at 2019 (nominal), against
+    overall CPI and recreation-services CPI. Anything above the red CPI line grew faster than
+    inflation. Click a sport to highlight it.</p>
+  <div class="chips" id="combined-chips"></div>
+  <div class="card">
+    <div class="chart-box tall">
+      <canvas id="combined-canvas" role="img" aria-label="All sports indexed to 100 at 2019 versus CPI. Underlying data available in each sport's table above."></canvas>
+    </div>
+  </div>
+</section>
+
+<section id="cheer-callout-section">
+  <!-- cheer callout injected content -->
+  <div class="callout" id="cheer-callout"></div>
+</section>
+
+<section id="attribution">
+  <h2>Is it private equity, or is it just inflation?</h2>
+  <div id="attribution-body"></div>
+</section>
+
+<section id="intensification">
+  <h2>Are families buying <em>more sport</em>, not just pricier sport?</h2>
+  <div id="intensification-body"></div>
+</section>
+
+<section id="verdicts">
+  <h2>Verdicts</h2>
+  <div class="verdict-table-wrap">
+    <table class="verdict" id="verdict-table"></table>
+  </div>
+  <div class="verdict-prose" id="verdict-prose"></div>
+</section>
+
+<section id="methodology">
+  <h2>Methodology &amp; caveats</h2>
+  <div class="method" id="method-body"></div>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <ol class="sources" id="sources-list"></ol>
+</section>
+
+<footer>
+  <p>Static site, no tracking. Charts: Chart.js (vendored). Data files: <a href="data/sources.json">data/sources.json</a>, <a href="data/sports.json">data/sports.json</a>, <a href="data/cpi.json">data/cpi.json</a>.</p>
+</footer>
+
+</div>
+<script src="vendor/chart.umd.js"></script>
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
