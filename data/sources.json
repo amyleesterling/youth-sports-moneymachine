@@ -466,8 +466,226 @@
       "url": "https://projectplay.org/state-of-play-2022/costs-to-play-trends",
       "year": 2022,
       "method": "parent survey",
-      "methodology": "Travel-sport participation doubled in one year to 29% of kids (fall 2022); travel costs +19% vs pre-COVID while spending on individual lessons fell 23%; travel was the largest cost category in both 2019 ($196/sport/child) and 2024 ($260).",
+      "methodology": "Travel-sport participation doubled in one year to 29% of kids (fall 2022); travel costs +19% vs pre-COVID while spending on individual lessons fell 23%; travel was the largest cost category in both 2019 ($196/sport/child) and 2024 ($260). Weekly sport hours (ages 6-18): 13.6 pre-pandemic, 7.2 in June 2020, 16.6 by Sept 2022.",
       "flag": "excerpt-verified"
+    },
+    "aspen_participation": {
+      "short": "Aspen participation trends",
+      "name": "Aspen Institute State of Play participation trends",
+      "url": "https://projectplay.org/state-of-play-2024-participation-trends",
+      "year": 2024,
+      "method": "parent survey",
+      "methodology": "Average number of sports played by kids 6-17: 1.63 in 2023, down 13% since 2019 - concentration into one sport. Participation gap between <$25k and $100k+ households widened from 13.6 points (2012) to 20.2 points (2024).",
+      "flag": "excerpt-verified"
+    },
+    "buckley2017": {
+      "short": "Buckley et al. specialization study",
+      "name": "Buckley et al., 'Early Single-Sport Specialization: A Survey of 3090 High School, Collegiate, and Professional Athletes' (Orthopaedic Journal of Sports Medicine, 2017)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28812031/",
+      "year": 2017,
+      "method": "peer-reviewed research",
+      "methodology": "45% of high-school athletes specialize in one sport; mean specialization age 12.7 for current HS athletes vs 14.1 for professionals - today's kids specialize ~1.5 years earlier than current pros did.",
+      "flag": null
+    },
+    "batdigest": {
+      "short": "Bat Digest BBCOR pricing dataset",
+      "name": "Bat Digest, 'BBCOR Bat Pricing Trends in Charts: A Decade of Data (2015-2025)'",
+      "url": "https://batdigest.com/blog/bbcor-price-trends-10-years/",
+      "year": 2025,
+      "method": "retail price dataset",
+      "methodology": "Flagship composite bats reached $500 in 2022 and stayed there; alloy bat prices +57% over 2015-2025; market is bimodal ($200-250 alloy vs $400-500 composite). High-end composites retailed ~$300-$400 in 2011. Little League's 2010 composite moratorium and the 2018 USA Bat standard forced fleet-wide re-purchases.",
+      "flag": null
+    },
+    "sportseta": {
+      "short": "Sports ETA industry reports",
+      "name": "Sports Events & Tourism Association, State of the Industry reports (with Tourism Economics)",
+      "url": "https://www.sportseta.org/blog/2024/04/24/sports-eta-releases-its-2023-state-of-the-industry-report-for-the-128-billion-sport-tourism-industry",
+      "year": 2023,
+      "method": "industry report",
+      "methodology": "Sports-tourism direct spending: $45.1B (2019), $39.7B (2021), $52.2B direct / $128B total impact (2023); 97% of destinations host youth events - youth is the most prevalent event type. Predecessor body NASC grew from 12 member commissions (1992) to 675+ (2014).",
+      "flag": "industry-association figures; treat impact multipliers as promotional"
+    },
+    "bisnow_facilities": {
+      "short": "Bisnow facility investment",
+      "name": "Bisnow, youth sports facility construction boom coverage",
+      "url": "https://www.bisnow.com/national/news/economic-development/youth-sports-building-boom-has-developers-cities-playing-ball-130071",
+      "year": 2024,
+      "method": "trade journalism",
+      "methodology": "Over $9B invested in youth/amateur-sport-specific venues since 2017; Sports Facilities Companies operates 100+ facilities.",
+      "flag": "excerpt-verified"
+    },
+    "littleleague_decline": {
+      "short": "Little League participation",
+      "name": "Little League participation history (Front Office Sports / The Public's Radio)",
+      "url": "https://frontofficesports.com/little-league-participation/",
+      "year": 2024,
+      "method": "participation records (news compilation)",
+      "methodology": "Little League peaked at 2,993,760 players (1997), ~2.6M (2008), declining 1.5-3%/yr since - while USSSA (95,000+ teams by 1999; 3.7M members today) and Perfect Game (founded 1995; 1.5M+ participants by 2024) boomed. Displacement evidence: the same kids moved to a format costing 5-10x more.",
+      "flag": "excerpt-verified"
+    },
+    "ncva_fees": {
+      "short": "NCVA tournament fee analysis",
+      "name": "Northern California Volleyball Association published fee analysis",
+      "url": "https://ncva.com/girls/feeanalysis/",
+      "year": 2025,
+      "method": "published fee schedule",
+      "methodology": "National-level club teams play ~9 tournaments/season; example team tournament budget $4,050 across 15 tournament days (Power League $1,600 + Presidents Day $875 + Golden State $600 + National Qualifier $975).",
+      "flag": null
+    },
+    "officials2024": {
+      "short": "officials shortage coverage",
+      "name": "Referee/umpire shortage coverage (SportStars, Athletic Business)",
+      "url": "https://www.athleticbusiness.com/operations/personnel/article/15682076/the-state-of-referee-and-umpire-shortage-in-youth-sports",
+      "year": 2024,
+      "method": "trade journalism",
+      "methodology": "Roughly 50,000 high-school officials lost nationally since 2018-19; >70% cite abuse; leagues raising pay and bonuses to retain officials.",
+      "flag": "excerpt-verified"
+    },
+    "bloomberg2024": {
+      "short": "Bloomberg 2024 feature",
+      "name": "Bloomberg, 'Private Equity Targets the $30 Billion Youth Sports Industry' (Aug 29, 2024)",
+      "url": "https://www.bloomberg.com/news/features/2024-08-29/private-equity-targets-30-billion-youth-sports-industry",
+      "year": 2024,
+      "method": "journalism",
+      "methodology": "Market >$30B/yr (possibly $50B); ~$900/child/season; $150k+-income families more than twice as likely to play travel sports; Cooperstown All Star Village record 12,000 players/763 teams under Unrivaled.",
+      "flag": "excerpt-verified"
+    },
+    "nyt2025": {
+      "short": "NYT 2025 feature",
+      "name": "New York Times, 'Youth Sports Are a $40 Billion Business. Private Equity Is Taking Notice' (2025)",
+      "url": "https://www.benningtonbanner.com/nyt/nyt_main/youth-sports-are-a-40-billion-business-private-equity-is-taking-notice/article_e115a9a8-a5be-5187-a5b6-7577205feeaf.html",
+      "year": 2025,
+      "method": "journalism",
+      "methodology": "Source of the Ripken Experience Aberdeen figure ($3,145/team for a 4-day tournament) and the $40B framing; frames higher fees under PE as a risk, not a documented outcome.",
+      "flag": "syndicated copy linked (original paywalled); excerpt-verified"
+    },
+    "stoller2022": {
+      "short": "Stoller BIG (2022)",
+      "name": "Matt Stoller, BIG newsletter, 'Antitrust and the Fall of a Cheerleading Empire' (Sept 2022)",
+      "url": "https://www.thebignewsletter.com/p/antitrust-and-the-fall-of-a-cheerleading",
+      "year": 2022,
+      "method": "analytic journalism",
+      "methodology": "Varsity monopoly mechanics: exclusive dealing, loyalty rebates, stay-to-play; all-star cheer family costs $10,000-$20,000/yr at the high end.",
+      "flag": "advocacy-adjacent analysis; cost figures anecdotal"
+    },
+    "jacobin2025": {
+      "short": "Jacobin 2025",
+      "name": "Jacobin, youth hockey private equity investigation (Nov 2025)",
+      "url": "https://jacobin.com/2025/11/youth-sports-hockey-private-equity",
+      "year": 2025,
+      "method": "journalism",
+      "methodology": "Black Bear at 42 rinks/11 states (Nov 2025); the new $50/player registration-and-insurance fee; streaming pricing.",
+      "flag": "advocacy-oriented outlet; figures cross-checked with USA Today/The Lever where possible"
+    },
+    "lever2025": {
+      "short": "The Lever 2025",
+      "name": "The Lever, 'Wall Street Is Paywalling Your Kids' Sports' (Nov 2025)",
+      "url": "https://www.levernews.com/wall-street-is-paywalling-your-kids-sports/",
+      "year": 2025,
+      "method": "journalism",
+      "methodology": "Black Bear TV streaming paywalls, parent filming bans, standings-point penalties for non-compliance.",
+      "flag": "excerpt-verified"
+    },
+    "npr2025": {
+      "short": "NPR 2025",
+      "name": "NPR All Things Considered, 'When private equity invests in youth sports facilities' (Nov 25, 2025)",
+      "url": "https://www.npr.org/2025/11/25/nx-s1-5616428/when-private-equity-invests-in-youth-sports-facilities",
+      "year": 2025,
+      "method": "journalism",
+      "methodology": "Interview corroborating the streaming-paywall and filming-ban reporting.",
+      "flag": null
+    },
+    "prospect2026": {
+      "short": "American Prospect 2026",
+      "name": "The American Prospect, 'Roots of the Youth Sports Gold Rush' (Feb 2026)",
+      "url": "https://prospect.org/2026/02/05/feb-2026-magazine-youth-sports-private-equity/",
+      "year": 2026,
+      "method": "journalism",
+      "methodology": "Estimates $15-19B of the ~$40B market flows through consolidated operators (3STEP, Unrivaled); notes exploitative practices predate PE ownership.",
+      "flag": "excerpt-verified"
+    },
+    "aelp2026": {
+      "short": "AELP report 2026",
+      "name": "American Economic Liberties Project, report on private equity in youth sports (Mar 2026)",
+      "url": "http://www.economicliberties.us/wp-content/uploads/2026/04/20260211-aelp-sports-fin.pdf",
+      "year": 2026,
+      "method": "advocacy report",
+      "methodology": "Varsity market share 'up to 90%'; alleges skating-lesson prices quadrupling to $200 at some Black Bear-acquired rinks; frames Varsity as the template for roll-ups in other sports.",
+      "flag": "advocacy organization; use for allegations and framing, not as primary price evidence"
+    },
+    "murphy2026": {
+      "short": "Sen. Murphy Atlantic essay",
+      "name": "Sen. Chris Murphy, essay in The Atlantic (from 'Crisis of the Common Good', May 2026)",
+      "url": "https://insideinvestigator.org/murphy-private-equity-youth-sports/",
+      "year": 2026,
+      "method": "opinion essay",
+      "methodology": "First-person account of a 5-month, 60-game Atlantic Hockey Federation season and ~$37/month Black Bear TV; co-sponsor of the Let Kids Play Act.",
+      "flag": "linked via summary (original paywalled); a policy advocate's account"
+    },
+    "deseret2026": {
+      "short": "Deseret News 2026",
+      "name": "Deseret News, 'The Price of Youth Sports' (May 2026)",
+      "url": "https://www.deseret.com/magazine/2026/05/01/the-price-of-youth-sports/",
+      "year": 2026,
+      "method": "journalism",
+      "methodology": "Varsity Spirit scale figures: ~600 championships/yr, 350,000 camp athletes, 750,000 competition participants.",
+      "flag": "excerpt-verified"
+    },
+    "nevindy2025": {
+      "short": "Nevada Independent fact-check",
+      "name": "The Nevada Independent, 'Did youth sports get more expensive between 2018 and 2024?'",
+      "url": "https://thenevadaindependent.com/article/did-youth-sports-get-more-expensive-between-2018-and-2024",
+      "year": 2025,
+      "method": "fact-check journalism",
+      "methodology": "Independent verification of the Aspen 46%-vs-inflation framing; notes travel was the top cost category in both survey windows and registration climbed to #2; attributes the rise to specialization and travel, not ownership.",
+      "flag": null
+    },
+    "harris2019pdf": {
+      "short": "Harris Poll 2019 data PDF",
+      "name": "The Harris Poll, TD Ameritrade Sports Parents Survey 2019 - full data tables",
+      "url": "https://theharrispoll.com/wp-content/uploads/2019/04/Sports-Parents-Survey-2019-Final-Approved.pdf",
+      "year": 2019,
+      "method": "parent survey (primary data PDF)",
+      "methodology": "Full bracket distributions behind the 2019 TD Ameritrade findings. Listed for re-verification; the full distribution was not retrievable in this research environment.",
+      "flag": "not fully retrieved - listed so readers can pull the primary PDF"
+    },
+    "usasf_worlds": {
+      "short": "USASF Worlds pricing PDFs",
+      "name": "USASF Cheerleading Worlds hotel/commuter package pricing documents",
+      "url": "https://usasfmain.s3.amazonaws.com/Worlds/docs/21-22/usasf_worlds_cheer_hotel-pricing_2022.pdf",
+      "year": 2022,
+      "method": "published fee schedule",
+      "methodology": "Documents the mandatory hotel/commuter package structure at Worlds (2021 rates $230-$315/room/night at designated resorts; paid bids up to $650/athlete).",
+      "flag": "structure verified; pull PDFs for current rates"
+    },
+    "fusion_complaint": {
+      "short": "Fusion Elite complaint (primary)",
+      "name": "Fusion Elite All Stars v. Varsity Brands - consolidated class-action complaint (W.D. Tenn.)",
+      "url": "https://www.classaction.org/media/fusion-elite-all-stars-v-varsity-brands-llc-et-al.pdf",
+      "url2": "https://www.classaction.org/media/jones-et-al-v-bain-capital-private-equity.pdf",
+      "year": 2020,
+      "method": "court filing",
+      "methodology": "Primary complaint documents for the gym-class and parent-class antitrust suits, including the exclusive-dealing, rebate-program and market-share allegations summarized on this page.",
+      "flag": "allegations, not findings - both cases settled without admission"
     }
-  }
+  },
+  "reading": [
+    { "outlet": "TIME", "date": "Aug 2017", "title": "How Kids' Sports Became a $15 Billion Industry", "url": "https://time.com/4913687/how-kids-sports-became-15-billion-industry/" },
+    { "outlet": "ProMarket (Stigler Center)", "date": "Feb 2020", "title": "Like Microsoft, but with More Glitter: The Cheerleading Monopoly Problem", "url": "https://www.promarket.org/2020/02/04/like-microsoft-but-with-more-glitter-the-cheerleading-monopoly-problem/" },
+    { "outlet": "Matt Stoller / BIG", "date": "Sep 2022", "title": "Antitrust and the Fall of a Cheerleading Empire", "url": "https://www.thebignewsletter.com/p/antitrust-and-the-fall-of-a-cheerleading" },
+    { "outlet": "Bloomberg", "date": "Aug 2024", "title": "Private Equity Targets the $30 Billion Youth Sports Industry", "url": "https://www.bloomberg.com/news/features/2024-08-29/private-equity-targets-30-billion-youth-sports-industry" },
+    { "outlet": "Oklahoma Watch", "date": "Mar 2025", "title": "Forced Housing, Hidden Kickbacks: How Stay-to-Play Squeezes Sports Parents", "url": "https://oklahomawatch.org/2025/03/13/forced-housing-hidden-kickbacks-how-stay-to-play-squeezes-sports-parents/" },
+    { "outlet": "New York Times", "date": "Jul 2025", "title": "Youth Sports Are a $40 Billion Business. Private Equity Is Taking Notice", "url": "https://www.benningtonbanner.com/nyt/nyt_main/youth-sports-are-a-40-billion-business-private-equity-is-taking-notice/article_e115a9a8-a5be-5187-a5b6-7577205feeaf.html" },
+    { "outlet": "The Lever", "date": "Nov 2025", "title": "Wall Street Is Paywalling Your Kids' Sports", "url": "https://www.levernews.com/wall-street-is-paywalling-your-kids-sports/" },
+    { "outlet": "NPR", "date": "Nov 2025", "title": "When private equity invests in youth sports facilities", "url": "https://www.npr.org/2025/11/25/nx-s1-5616428/when-private-equity-invests-in-youth-sports-facilities" },
+    { "outlet": "Jacobin", "date": "Nov 2025", "title": "Private Equity Is Coming for Youth Hockey", "url": "https://jacobin.com/2025/11/youth-sports-hockey-private-equity" },
+    { "outlet": "Washington Post", "date": "Jan 2026", "title": "The soaring price of youth sports: $50 to try out, $3,000 to play", "url": "https://www.washingtonpost.com/business/2026/01/07/youth-sports-cost-parents-investors-profit/" },
+    { "outlet": "The American Prospect", "date": "Feb 2026", "title": "Roots of the Youth Sports Gold Rush", "url": "https://prospect.org/2026/02/05/feb-2026-magazine-youth-sports-private-equity/" },
+    { "outlet": "American Economic Liberties Project", "date": "Mar 2026", "title": "Report on private equity in youth sports", "url": "http://www.economicliberties.us/wp-content/uploads/2026/04/20260211-aelp-sports-fin.pdf" },
+    { "outlet": "USA Today", "date": "2026", "title": "Nine-month investigation of Black Bear Sports Group (syndicated)", "url": "https://www.aol.com/articles/usa-today-investigates-owner-kensington-091220642.html" },
+    { "outlet": "The Atlantic (Sen. Chris Murphy)", "date": "May 2026", "title": "Essay on private equity and youth sports (summary link)", "url": "https://insideinvestigator.org/murphy-private-equity-youth-sports/" },
+    { "outlet": "Deseret News", "date": "May 2026", "title": "The Price of Youth Sports", "url": "https://www.deseret.com/magazine/2026/05/01/the-price-of-youth-sports/" },
+    { "outlet": "Reason", "date": "May 2026", "title": "Is Private Equity Really Buying Up the Rituals of American Childhood? (counter-argument)", "url": "https://reason.com/2026/05/29/is-private-equity-really-buying-up-the-rituals-of-american-childhood/" },
+    { "outlet": "CNBC", "date": "Jun 2026", "title": "'Field of Fees': Congress scrutinizes private equity in youth sports", "url": "https://www.cnbc.com/2026/06/30/private-equity-youth-sports-congress-scrutiny.html" }
+  ]
 }

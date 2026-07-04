@@ -20,7 +20,7 @@
     'between PE owners three times: Charlesbank (~$1.5B, 2014), Bain Capital (~$2.5B, 2018), and KKR ' +
     '(~$4.75B, 2024) ' + srcRef('varsity_deals') + '. Plaintiffs alleged Varsity controlled roughly 80–90% ' +
     'of the all-star competition market after buying up rival event producers ' + srcRef('varsity_litigation') + '.</p>' +
-    '<p><strong>What the litigation record shows:</strong> gyms and parents brought antitrust suits; Varsity and Bain ' +
+    '<p><strong>What the litigation record shows:</strong> gyms and parents brought antitrust suits ' + srcRef('fusion_complaint') + '; Varsity and Bain ' +
     'settled for <strong>$43.5M</strong> (Fusion Elite, gym class, 2023) and <strong>$82.5M</strong> (Jones, ' +
     'parent/spectator class, 2024) without admitting liability ' + srcRef('varsity_litigation') + '. Court records ' +
     'surfaced by Oklahoma Watch show the mandatory “stay-to-play” lodging program collected roughly ' +
@@ -69,11 +69,11 @@
     'governing bodies that once bought $5–20M liability towers are “lucky to secure $1M,” and gymnastics clubs face ' +
     'general-liability-plus-abuse premiums above $25,000 ' + srcRef('insurance2024') + '. USA Gymnastics raised its 2025-26 ' +
     'sanction fees citing insurance explicitly ' + srcRef('gym_fees') + '.</li>' +
-    '<li><strong>Officials’ labor.</strong> Roughly 50,000 high-school officials left since 2018-19; leagues raised pay to retain them.</li>' +
+    '<li><strong>Officials’ labor.</strong> Roughly 50,000 high-school officials left since 2018-19; leagues raised pay to retain them ' + srcRef('officials2024') + '.</li>' +
     '<li><strong>Facilities and energy.</strong> Refrigeration is 40–50% of a rink’s utility bill; many acquired rinks were financially failing ' +
     '(Black Bear’s own defense — and Reason magazine’s counter-argument notes it owns ~50 of ~2,100 US rinks) ' + srcRef('reason2026') + '.</li>' +
-    '<li><strong>Demand.</strong> Sports-tourism direct spending hit $52B in 2023, with 97% of destinations hosting youth events; ' +
-    'higher-income families are twice as likely to choose travel sports. Some of the price rise is families buying a more expensive product on purpose.</li>' +
+    '<li><strong>Demand.</strong> Sports-tourism direct spending hit $52B in 2023, with 97% of destinations hosting youth events ' + srcRef('sportseta') + '; ' +
+    'higher-income families are twice as likely to choose travel sports ' + srcRef('bloomberg2024') + '. Some of the price rise is families buying a more expensive product on purpose.</li>' +
     '</ul>' +
 
     '<h3>What research says about PE and prices generally</h3>' +
@@ -95,13 +95,13 @@
 
     '<h3>What is quantified</h3>' +
     '<ul class="method">' +
-    '<li><strong>Concentration, not addition.</strong> Kids play fewer sports (1.63 in 2023, −13% since 2019) but more of the one they keep: ' +
-    'weekly sport hours were 13.6 pre-pandemic and 16.6 by fall 2022; 1 in 5 kids now plays a single sport 9–12 months a year ' + srcRef('aspen_hours') + '.</li>' +
-    '<li><strong>Earlier specialization.</strong> Today’s high-school athletes specialized at 12.7 years old on average — younger than current pros did (14.1), per a 3,090-athlete study.</li>' +
-    '<li><strong>Tournament norms.</strong> Travel baseball: 8–12 tournaments/season at $350–$1,000 entry each; club volleyball ~9; all-star cheer 7–8. ' +
-    'Little League peaked at ~3.0M players in 1997 and has declined 1.5–3%/yr while USSSA and Perfect Game boomed — the same kids moved to a format that costs 5–10x more.</li>' +
-    '<li><strong>Facility supply.</strong> Over $9B has been invested in youth/amateur sports venues since 2017; tournament-recruiting sports commissions grew from 12 (1992) to 675+ (2014).</li>' +
-    '<li><strong>Gear, where it did jump.</strong> Flagship BBCOR bats hit $500 by 2022 (high-end composites were ~$300–$400 in 2011), and rule changes in 2010/2018 forced fleet-wide re-purchases — ' +
+    '<li><strong>Concentration, not addition.</strong> Kids play fewer sports (1.63 in 2023, −13% since 2019) ' + srcRef('aspen_participation') + ' but more of the one they keep: ' +
+    'weekly sport hours were 13.6 pre-pandemic and 16.6 by fall 2022; 1 in 5 kids now plays a single sport 9–12 months a year ' + srcRef('aspen_hours') + srcRef('aspen2024') + '.</li>' +
+    '<li><strong>Earlier specialization.</strong> Today’s high-school athletes specialized at 12.7 years old on average — younger than current pros did (14.1), per a 3,090-athlete study ' + srcRef('buckley2017') + '.</li>' +
+    '<li><strong>Tournament norms.</strong> Travel baseball: 8–12 tournaments/season at $350–$1,000 entry each; club volleyball ~9 (one published team budget: $4,050 across 15 tournament days ' + srcRef('ncva_fees') + '); all-star cheer 7–8. ' +
+    'Little League peaked at ~3.0M players in 1997 and has declined 1.5–3%/yr while USSSA and Perfect Game boomed — the same kids moved to a format that costs 5–10x more ' + srcRef('littleleague_decline') + '.</li>' +
+    '<li><strong>Facility supply.</strong> Over $9B has been invested in youth/amateur sports venues since 2017 ' + srcRef('bisnow_facilities') + '; tournament-recruiting sports commissions grew from 12 (1992) to 675+ (2014) ' + srcRef('sportseta') + '.</li>' +
+    '<li><strong>Gear, where it did jump.</strong> Flagship BBCOR bats hit $500 by 2022 (high-end composites were ~$300–$400 in 2011), and rule changes in 2010/2018 forced fleet-wide re-purchases ' + srcRef('batdigest') + ' — ' +
     'real, but too small a category to move the total.</li>' +
     '</ul>' +
 
@@ -306,5 +306,31 @@
       }
       ol.appendChild(li);
     });
+  })();
+
+  /* ---------- press record (data-driven: textContent) ---------- */
+  (function pressRecord() {
+    var section = document.getElementById('sources');
+    var h3 = document.createElement('h3');
+    h3.textContent = 'Press record: how this story has been covered';
+    section.appendChild(h3);
+    var p = document.createElement('p');
+    p.className = 'method';
+    p.textContent = 'The reporting that shaped the public narrative, in order — including the strongest published counter-argument. Items here informed the framing; every chartable number came from the numbered sources above.';
+    section.appendChild(p);
+    var ul = document.createElement('ol');
+    ul.className = 'sources';
+    (DATA.reading || []).forEach(function (r) {
+      var li = document.createElement('li');
+      var strong = document.createElement('strong');
+      strong.textContent = r.outlet + ' (' + r.date + '). ';
+      li.appendChild(strong);
+      var a = document.createElement('a');
+      a.href = r.url; a.rel = 'noopener';
+      a.textContent = r.title;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    section.appendChild(ul);
   })();
 })();

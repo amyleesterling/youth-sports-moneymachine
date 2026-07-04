@@ -31,6 +31,7 @@ const out = 'window.DATA = ' + JSON.stringify({
   headline: sports.headline,
   combined_base_year: sports.combined_base_year,
   context_series: sports.context_series || [],
+  reading: sources.reading || [],
   sports: sports.sports,
   cpi: cpi,
   sources: numbered
