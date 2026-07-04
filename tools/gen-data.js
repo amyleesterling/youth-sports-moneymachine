@@ -30,6 +30,7 @@ if (missing.size) {
 const out = 'window.DATA = ' + JSON.stringify({
   headline: sports.headline,
   combined_base_year: sports.combined_base_year,
+  context_series: sports.context_series || [],
   sports: sports.sports,
   cpi: cpi,
   sources: numbered

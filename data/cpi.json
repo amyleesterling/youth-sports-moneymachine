@@ -1,0 +1,49 @@
+{
+  "_comment": "BLS CPI annual averages (period M13), U.S. city average, all urban consumers, not seasonally adjusted. Values verified against the BLS cu.data flat files (download.bls.gov/pub/time.series/cu/) as mirrored verbatim by the palewire `cpi` package v2.0.10; canonical lookup https://data.bls.gov/timeseries/<SERIES_ID>. 2016-2024 all-items values match BLS-published figures exactly; 2025 is the full-year annual average.",
+  "base_year": 2025,
+  "all_items_series_id": "CUUR0000SA0",
+  "all_items_base": "1982-84=100",
+  "all_items": {
+    "2016": 240.007,
+    "2017": 245.120,
+    "2018": 251.107,
+    "2019": 255.657,
+    "2020": 258.811,
+    "2021": 270.970,
+    "2022": 292.655,
+    "2023": 304.702,
+    "2024": 313.689,
+    "2025": 321.943
+  },
+  "recreation_label": "recreation services",
+  "recreation_series_id": "CUUR0000SARS",
+  "recreation_base": "Dec 2009=100",
+  "recreation": {
+    "2016": 115.134,
+    "2017": 119.115,
+    "2018": 121.622,
+    "2019": 124.370,
+    "2020": 127.591,
+    "2021": 130.506,
+    "2022": 136.684,
+    "2023": 144.768,
+    "2024": 150.000,
+    "2025": 155.683
+  },
+  "lessons_label": "fees for lessons or instructions",
+  "lessons_series_id": "CUUR0000SERF03",
+  "lessons_base": "Dec 1986=100",
+  "lessons_note": "Closest CPI proxy for youth-sports fees; not charted (kept to two benchmark lines) but cited in the analysis.",
+  "lessons": {
+    "2016": 293.075,
+    "2017": 303.645,
+    "2018": 312.067,
+    "2019": 319.044,
+    "2020": 324.536,
+    "2021": 340.282,
+    "2022": 351.368,
+    "2023": 383.536,
+    "2024": 395.485,
+    "2025": 408.804
+  }
+}
