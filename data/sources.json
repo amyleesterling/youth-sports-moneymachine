@@ -8,8 +8,8 @@
       "url": "https://www.aspeninstitute.org/wp-content/uploads/2025/08/FINAL-Utah-State-Parent-Survey-Report.pdf",
       "year": 2019,
       "method": "parent survey",
-      "methodology": "National survey of 1,032 parents of youth-sport participants (oldest active child); spending per child, per sport, per year across registration, equipment, travel, lessons, camps.",
-      "flag": "excerpt-verified; per-sport table cross-checked against ESPN, Money.com and Project Play reproductions"
+      "methodology": "National survey of 1,032 parents of youth-sport participants (oldest active child); spending per child, per sport, per year across registration, equipment, travel, lessons, camps. Per-sport means (Table, p.15): baseball $659.96, basketball $426.78, field hockey $2,124.62, golf $925.38, gymnastics $1,580.28, ice hockey $2,582.74, lacrosse $1,289.22, soccer $536.90, swimming $786.03, tennis $1,170.09, volleyball $595.49, all sports $692.53 (range $0-$34,900). Cheerleading had only 21 respondents, grouped under 'Other sports' - no cheer figure exists in the primary data.",
+      "flag": "primary-verified - full report PDF obtained and read directly"
     },
     "aspen2022": {
       "short": "Aspen/TeamSnap fall 2022 survey",
@@ -262,14 +262,14 @@
       "methodology": "Cincy Crush 2026: $1,650/player regional team (9 tournament days). LA Volleyball Club 2025-26: base fees + $650 additional dues per travel tournament. Industry range: national/travel teams $4,000-$6,000/season, average club $3,000-$5,000, excluding player travel and uniforms.",
       "flag": "current-year snapshots; no volleyball figure exists in any Aspen public release"
     },
-    "vb_2019_repro": {
-      "short": "2019 table reproduction (volleyball)",
-      "name": "PlaygroundEquipment.com reproduction of the Aspen/Utah State 2019 per-sport table",
-      "url": "https://www.playgroundequipment.com/the-average-cost-of-each-childrens-sport/",
-      "year": 2019,
-      "method": "parent survey (secondary reproduction)",
-      "methodology": "Reproduces the 2019 Aspen/USU table including volleyball at $595/yr. This value could not be confirmed at an Aspen URL - single-source reproduction.",
-      "flag": "UNVERIFIED at primary source; single-source - treated as anecdotal-grade"
+    "casv_2021": {
+      "short": "Cooperstown All Star Village 2021 form",
+      "name": "Cooperstown All Star Village 2021 team registration form (pre-acquisition)",
+      "url": "https://cdn2.sportngin.com/attachments/document/9625-2219403/Cooperstown_All_Star_Village_2021_Team_Registration_Form.pdf",
+      "year": 2021,
+      "method": "published fee schedule",
+      "methodology": "All-inclusive package $1,295.00 per player/coach (2021 season, pre-acquisition by Harris/Blitzer in late 2022); $1,295 no-umpire fee per team; $650 bunkhouse fee ($250 refundable). Completes the before/after test: package ~$1,395/player in 2026 under Unrivaled = +7.7% nominal over five years vs ~+19% CPI - a real-terms decline on the headline package, though a new ~$262 facility fee erodes part of that.",
+      "flag": "primary-verified - original PDF obtained and read directly; note 2021 was a COVID-affected season"
     },
     "usav_stayplay": {
       "short": "USAV stay-to-play policies",
@@ -356,8 +356,8 @@
       "url2": "https://www.sportspro.com/news/unrivaled-sports-youth-harris-blitzer-investment-dicks-sporting-goods-may-2025/",
       "year": 2025,
       "method": "deal record",
-      "methodology": "Harris/Blitzer bought Cooperstown All Star Village for $116M (late 2022) and majority of Ripken Baseball; launched Unrivaled Sports Mar 27, 2024 (Chernin Group investment); $120M round led by Dick's Sporting Goods, May 2025. All Star Village ~$1,395/player + fees (2026); pre-acquisition fee not publicly archived - before/after incomplete.",
-      "flag": "before/after at All Star Village incomplete (pre-2022 fee not found)"
+      "methodology": "Harris/Blitzer bought Cooperstown All Star Village for $116M (late 2022) and majority of Ripken Baseball; launched Unrivaled Sports Mar 27, 2024 (Chernin Group investment); $120M round led by Dick's Sporting Goods, May 2025. All Star Village ~$1,395/player + ~$262 facility fee (2026), vs $1,295/player pre-acquisition (2021 registration form) - see the CASV 2021 source.",
+      "flag": "current (2026) fee figures excerpt-verified via LeagueApps registration pages"
     },
     "blackbear": {
       "short": "Black Bear Sports record",

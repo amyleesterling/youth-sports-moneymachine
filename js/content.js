@@ -27,14 +27,92 @@
     '<strong>$4M a year in hotel-room rebates</strong>, with kickbacks of $20/room or 30% of the booking agent’s ' +
     'commission ' + srcRef('okwatch_stayplay') + '. The Jones settlement bars stay-to-play at 35% of Varsity events ' +
     'through 2029.</p>' +
-    '<p><strong>What the price data shows: almost nothing.</strong> No national survey — not Aspen in 2019, 2022 or 2024, ' +
-    'not LendingTree — has ever published a cheer spending figure. Varsity’s own event-fee history is sealed in ' +
-    'litigation filings. The best public numbers are gym-level: roughly $300–$1,000 for a rec season versus ' +
+    '<p><strong>What the price data shows: almost nothing.</strong> No national survey has ever published a cheer spending ' +
+    'figure — the 2019 Aspen/Utah State survey had just 21 cheerleading respondents, grouped under “Other sports” (verified in ' +
+    'the primary report), and no wave since has broken cheer out ' + srcRef('aspen2019') + '. Varsity’s own event-fee history is ' +
+    'sealed in litigation filings. The best public numbers are gym-level: roughly $300–$1,000 for a rec season versus ' +
     '$5,000–$10,000 all-in for an all-star year ' + srcRef('cheer_gym_fees') + srcRef('promarket2020') + '. ' +
     'So the sport most often cited as proof that PE inflates youth sports cannot actually be tested against a price series. ' +
     'That asymmetry — strong ownership evidence, absent price evidence — is itself the finding.</p>' +
     '<p class="fine">Settlements involve no admission of wrongdoing; overcharge magnitudes remain allegations. ' +
     'Correlation between ownership events and price levels is not causation.</p>';
+
+  /* ---------- longer record section ---------- */
+  var FEE_RECORDS = [
+    { org: 'AJGA junior golf', metric: 'Open-tournament member entry', first: '$280 (2011)', latest: '$280–$295 (2025)', nominal: '≈0%', cpi: 'CPI +34% since 2016 alone', verdict: 'Deep real decline', src: 'ajga_fees' },
+    { org: 'Youth hockey, Tier 2 (AA/A) club fee', metric: 'Avg. registration (PlayMetrics/Crossbar records)', first: '~$1,505* (2015)', latest: '$2,448 (2025)', nominal: '+62.6%', cpi: 'CPI roughly +a third over the decade', verdict: 'Well above inflation', src: 'playmetrics2025' },
+    { org: 'Youth hockey, Tier 1 (AAA) club fee', metric: 'Avg. registration (same dataset)', first: '~$5,170* (2015)', latest: '$7,055 (2025)', nominal: '+36.4%', cpi: 'CPI roughly +a third', verdict: 'Roughly matched inflation', src: 'playmetrics2025' },
+    { org: 'Cooperstown Dreams Park (independent)', metric: 'Per-player week package', first: '$995 (2019)', latest: '$1,295 (2024–26)', nominal: '+30%', cpi: 'CPI +22.7% (2019–24)', verdict: 'Above inflation, no PE owner', src: 'cooperstown_dp' },
+    { org: 'Cooperstown All Star Village (PE-owned since 2022)', metric: 'Per-player week package', first: '$1,295 (2021)', latest: '~$1,395 (2026)', nominal: '+7.7%', cpi: 'CPI +18.8% (2021–25)', verdict: 'Below inflation (new fee lines caveat)', src: 'casv_2021' },
+    { org: 'USA Hockey', metric: 'National registration, top youth tier', first: '$70 (2022-23)', latest: '$89 (2025-26)', nominal: '+27%', cpi: 'CPI +10.0% (2022–25)', verdict: 'Above inflation', src: 'usahockey_fees' },
+    { org: 'USA Swimming', metric: 'Premium athlete national fee', first: '$62 (2020)', latest: '$70 (2024-25)', nominal: '+13%', cpi: 'CPI +21.2% (2020–24)', verdict: 'Below inflation (but club dues +221% in 2025)', src: 'usaswimming_fees' },
+    { org: 'Little League International', metric: 'All-Star tournament team fee', first: '$150 (pre-2016)', latest: '$200 (2016–present)', nominal: '+33% (one step)', cpi: 'raised once, a decade ago', verdict: 'Below inflation since', src: 'littleleague_fee' },
+    { org: 'IMG Academy', metric: 'Boarding tuition', first: '$86,400 (2023-24)', latest: '~$93,900 (2025-26)', nominal: '+8.7%', cpi: 'CPI +5.7% (2023–25)', verdict: 'Above inflation', src: 'img_tuition' },
+    { org: 'Flagship BBCOR baseball bat', metric: 'Retail price (Bat Digest decade dataset)', first: '~$300–$400 (2011)', latest: '$500 (2022–25)', nominal: '+~40%', cpi: 'window predates verified CPI set', verdict: 'Roughly tracked inflation', src: 'batdigest' }
+  ];
+
+  (function historySection() {
+    var body = document.getElementById('history-body');
+    var intro = document.createElement('p');
+    intro.className = 'section-intro';
+    intro.innerHTML = 'The survey record cannot go back further than 2019 because <strong>no national spending survey existed before then</strong> — ' +
+      'Aspen’s 2019 wave was the first. That absence is a finding: a market now estimated at $30–40B was not being measured at all. ' +
+      'What does exist earlier is the <strong>fee-schedule record</strong> — the same organization’s published prices over time. It is sparse, ' +
+      'it measures list prices rather than what families actually spend, and it is the closest thing to pre-2019 price history that exists:';
+    body.appendChild(intro);
+
+    var wrap = document.createElement('div');
+    wrap.className = 'verdict-table-wrap';
+    var tbl = document.createElement('table');
+    tbl.className = 'verdict';
+    var thead = document.createElement('thead');
+    var hr = document.createElement('tr');
+    ['Organization', 'Price tracked', 'First', 'Latest', 'Nominal', 'Same-window CPI', 'Read'].forEach(function (h) {
+      var th = document.createElement('th'); th.textContent = h; hr.appendChild(th);
+    });
+    thead.appendChild(hr); tbl.appendChild(thead);
+    var tbody = document.createElement('tbody');
+    FEE_RECORDS.forEach(function (r) {
+      var tr = document.createElement('tr');
+      var org = document.createElement('td');
+      org.textContent = r.org + ' ';
+      org.insertAdjacentHTML('beforeend', srcRef(r.src));
+      tr.appendChild(org);
+      [r.metric, r.first, r.latest, r.nominal, r.cpi].forEach(function (v, i) {
+        var td = document.createElement('td');
+        if (i >= 1 && i <= 3) td.className = 'num';
+        td.textContent = v;
+        tr.appendChild(td);
+      });
+      var vd = document.createElement('td');
+      var strong = document.createElement('strong');
+      strong.textContent = r.verdict;
+      vd.appendChild(strong);
+      tr.appendChild(vd);
+      tbody.appendChild(tr);
+    });
+    tbl.appendChild(tbody);
+    wrap.appendChild(tbl);
+    body.appendChild(wrap);
+
+    var notes = document.createElement('div');
+    notes.innerHTML =
+      '<p class="method" style="margin-top:14px">* The 2015 hockey dollar levels are computed from the dataset’s published percentage changes, not published directly. ' +
+      'CPI comparisons are shown only where both endpoints fall inside the independently verified 2016–2025 CPI table.</p>' +
+      '<h3>The pre-2019 survey fragments</h3>' +
+      '<p class="method"><strong>TD Ameritrade surveyed elite-club parents in 2016 and 2019</strong> — different frame (monthly spend, club/travel families only), ' +
+      'but it is the only repeated pre-2019 measurement. The share spending $500+/month per child was roughly <strong>29% in 2016 and 27% in 2019</strong> — ' +
+      'essentially flat before the pandemic ' + srcRef('td2016') + srcRef('td2019') + '. The steep part of the survey curve is post-COVID.</p>' +
+      '<p class="method"><strong>A 2017 Utah State figure cited by TIME</strong> put average family spending at $2,292/yr — but that is per family, all children, ' +
+      'all sports: a different denominator than Aspen’s per-child-per-sport series, so it cannot be placed on the same chart ' + srcRef('time2017') + '.</p>' +
+      '<p class="method"><strong>Market-size estimates</strong> stretch back further but mix estimators: WinterGreen put the US market at ~$9.9B (2010, implied), ' +
+      '$15.3B (2017) and $19.2B (2019) ' + srcRef('time2017') + srcRef('wintergreen2019') + '; Aspen’s own calculation reached ~$28B (2022) and parent spending of $40B+ (2024) ' + srcRef('aspen_facts') + srcRef('aspen2024') + '. ' +
+      'These track participation and intensity as much as price — context, not price evidence.</p>' +
+      '<p class="method"><strong>Displacement is the longest signal of all:</strong> Little League peaked at ~3.0M players in 1997 and has declined 1.5–3% a year ' +
+      'while USSSA and Perfect Game boomed ' + srcRef('littleleague_decline') + '. The clearest long-run change isn’t that the same product got pricier — ' +
+      'it’s that childhood sport migrated from a $150/season format to a $1,500–$5,000/season format.</p>';
+    body.appendChild(notes);
+  })();
 
   /* ---------- attribution section ---------- */
   document.getElementById('attribution-body').innerHTML =
@@ -53,15 +131,16 @@
     'Federation) — vertical integration that Michigan’s Attorney General opened an antitrust inquiry into in 2026 ' +
     srcRef('blackbear') + srcRef('congress2026') + '.</p>' +
 
-    '<h3>The control case: prices rose above inflation <em>without</em> PE too</h3>' +
-    '<p class="method">Family-owned, independent Cooperstown Dreams Park raised its per-player week fee from ' +
-    '<strong>$995 (2019) to $1,295 (2024–26)</strong> — +30% nominal against +23% CPI, with no private-equity ' +
-    'owner ' + srcRef('cooperstown_dp') + '. Meanwhile the PE-owned comparison (Cooperstown All Star Village, bought ' +
-    'by Josh Harris and David Blitzer in 2022) charges ~$1,395/player plus new team-level fees — but its ' +
-    'pre-acquisition price was never publicly archived, so the cleanest before/after test in baseball cannot be ' +
-    'completed ' + srcRef('unrivaled') + '. And 3STEP Sports — the biggest club roll-up of all, 50+ acquisitions across ' +
-    'lacrosse, volleyball and soccer — has <strong>no documented before/after pricing anywhere in the public record</strong> ' +
-    srcRef('threestep') + '. Absence of evidence, in both directions.</p>' +
+    '<h3>The control case: the Cooperstown natural experiment cuts <em>against</em> the story</h3>' +
+    '<p class="method">Two week-long 12U baseball destinations sit outside Cooperstown, NY. The family-owned, independent one ' +
+    '(Dreams Park) raised its per-player fee from <strong>$995 (2019) to $1,295 (2024–26)</strong> — +30% nominal against +23% CPI, ' +
+    'above inflation with no private-equity owner ' + srcRef('cooperstown_dp') + '. The PE-owned one (All Star Village, bought by ' +
+    'Josh Harris and David Blitzer in late 2022) went from <strong>$1,295/player on its 2021 pre-acquisition registration form to ' +
+    '~$1,395 in 2026 — +7.7%, well below the ~+19% CPI over that window</strong> ' + srcRef('casv_2021') + srcRef('unrivaled') + '. ' +
+    'Caveats: the 2021 base year was COVID-affected, and Unrivaled added new fee lines (a ~$262 facility fee, a higher team umpire fee) ' +
+    'that a package-price comparison understates — but on the headline price, the independent operator out-raised the PE one. ' +
+    'And 3STEP Sports — the biggest club roll-up of all, 50+ acquisitions across lacrosse, volleyball and soccer — has ' +
+    '<strong>no documented before/after pricing anywhere in the public record</strong> ' + srcRef('threestep') + '.</p>' +
 
     '<h3>Documented non-PE cost drivers</h3>' +
     '<ul class="method">' +
@@ -253,9 +332,10 @@
     '<p>The record supports a narrow, specific claim, not the broad one. <strong>Where an owner controls a bottleneck</strong> — Varsity’s ' +
     '~90% of all-star cheer competitions, a town’s only rink — there is verified or litigation-grade evidence of above-market pricing: ' +
     'the $320→$370 ice rate, the $4M/yr stay-to-play rebates, $126M in settlements ' + srcRef('usatoday_blackbear') + srcRef('okwatch_stayplay') + srcRef('varsity_litigation') + '. ' +
-    '<strong>Where ownership is fragmented, the effect is undocumented</strong> — 3STEP’s 50+ club acquisitions have produced no public ' +
-    'before/after price at all ' + srcRef('threestep') + '. And the independent control case (Dreams Park, +30% with no PE owner ' + srcRef('cooperstown_dp') + ') ' +
-    'plus the category decomposition (services up ~35%, equipment up 7%) say most of the increase is families buying more travel, more ' +
+    '<strong>Where ownership is fragmented, the effect is undocumented or even reversed</strong> — 3STEP’s 50+ club acquisitions have produced no public ' +
+    'before/after price at all ' + srcRef('threestep') + ', and in the one completed head-to-head (Cooperstown), the independent park raised prices +30% ' +
+    'while the PE-owned park raised its package just +7.7% ' + srcRef('cooperstown_dp') + srcRef('casv_2021') + '. That, ' +
+    'plus the category decomposition (services up ~35%, equipment up 7%), says most of the increase is families buying more travel, more ' +
     'lessons and more tournaments in an inflating service economy. PE is best supported as an <em>accelerant at chokepoints</em>, ' +
     'not the engine of the whole curve.</p>';
 
@@ -273,7 +353,9 @@
     '<p><strong>PE event markers are annotations, not claims.</strong> A vertical tick marks an ownership event; it does not assert that the ' +
     'event caused any price movement. Correlation is not causation, and with 2–3 survey points per decade the charts could not demonstrate causation even where it exists.</p>' +
     '<p><strong>Verification caveat.</strong> Research for this page was performed in a sandboxed environment whose network proxy blocked direct page fetches; ' +
-    'figures were verified against search-indexed excerpts of the cited pages (cross-checked across independent queries) rather than full-page reads. ' +
+    'most figures were verified against search-indexed excerpts of the cited pages (cross-checked across independent queries) rather than full-page reads. ' +
+    'Two primary documents were subsequently obtained and read in full: the 2019 Utah State survey report (confirming the entire per-sport table, including ' +
+    'volleyball, and cheer’s absence) and the Cooperstown All Star Village 2021 registration form — sources marked “primary-verified.” ' +
     'Every source URL is listed below so every number can be re-verified. Nothing on this page is estimated from memory; where a figure could not be sourced, it is absent and the gap is stated.</p>';
 
   /* ---------- sources list (data-driven: textContent) ---------- */
