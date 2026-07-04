@@ -49,7 +49,15 @@
     { org: 'USA Swimming', metric: 'Premium athlete national fee', first: '$62 (2020)', latest: '$70 (2024-25)', nominal: '+13%', cpi: 'CPI +21.2% (2020–24)', verdict: 'Below inflation (but club dues +221% in 2025)', src: 'usaswimming_fees' },
     { org: 'Little League International', metric: 'All-Star tournament team fee', first: '$150 (pre-2016)', latest: '$200 (2016–present)', nominal: '+33% (one step)', cpi: 'raised once, a decade ago', verdict: 'Below inflation since', src: 'littleleague_fee' },
     { org: 'IMG Academy', metric: 'Boarding tuition', first: '$86,400 (2023-24)', latest: '~$93,900 (2025-26)', nominal: '+8.7%', cpi: 'CPI +5.7% (2023–25)', verdict: 'Above inflation', src: 'img_tuition' },
-    { org: 'Flagship BBCOR baseball bat', metric: 'Retail price (Bat Digest decade dataset)', first: '~$300–$400 (2011)', latest: '$500 (2022–25)', nominal: '+~40%', cpi: 'window predates verified CPI set', verdict: 'Roughly tracked inflation', src: 'batdigest' }
+    { org: 'Flagship BBCOR baseball bat', metric: 'Retail price (Bat Digest decade dataset)', first: '~$300–$400 (2011)', latest: '$500 (2022–25)', nominal: '+~40%', cpi: 'window predates verified CPI set', verdict: 'Roughly tracked inflation', src: 'batdigest' },
+    { org: 'Elk River Youth Hockey (MN, community assoc.)', metric: 'Squirt registration (fee structure changed across years)', first: '$1,325 (2018-19)', latest: '$1,000 (2024-25)', nominal: '−25%', cpi: 'CPI +24.9% (2018–24)', verdict: 'Deep real decline', src: 'fee_dataset' },
+    { org: 'KC Cheer (KS, all-star gym)', metric: 'Top-team monthly tuition', first: '$220/mo (2019-20)', latest: '$235/mo (2022-23)', nominal: '+6.8%', cpi: 'CPI +14.5% (2019–22)', verdict: 'Below inflation (booster dues flat into 2025-26)', src: 'fee_dataset' },
+    { org: 'Nashville Youth Hockey League (TN, house)', metric: '8U house-league season', first: '$750 (2022-23)', latest: '$1,000 (2025-26)', nominal: '+33%', cpi: 'CPI +10.0% (2022–25)', verdict: 'Well above inflation', src: 'fee_dataset' },
+    { org: 'Utah Surf SC (soccer club)', metric: 'U13-14 club-fee floor', first: '$1,095 (2024-25)', latest: '$1,575 (2025-26)', nominal: '+44% in one year', cpi: 'CPI +2.6% (2024–25)', verdict: 'Far above inflation', src: 'fee_dataset' },
+    { org: 'Sideout Sports (NJ volleyball)', metric: 'National-team monthly dues', first: '$458/mo (2022-23)', latest: '$581/mo (2025-26)', nominal: '+27%', cpi: 'CPI +10.0% (2022–25)', verdict: 'Well above inflation', src: 'fee_dataset' },
+    { org: 'La Roca FC (UT soccer)', metric: 'Girls ECNL registration', first: '$3,560 (2020-21)', latest: '$3,900 (2023-24)', nominal: '+9.6%', cpi: 'CPI +17.7% (2020–23)', verdict: 'Below inflation', src: 'fee_dataset' },
+    { org: '256 Lacrosse Club (AL)', metric: 'Summer club fee (org publishes its own history)', first: '$650 (2022–24, flat)', latest: '$750 (2025)', nominal: '+15%', cpi: 'CPI +10.0% (2022–25)', verdict: 'Slightly above inflation', src: 'fee_dataset' },
+    { org: 'Varsity — The Summit (KKR-owned)', metric: 'Mandatory hotel package, quad 4-night', first: '$853 (2023)', latest: '$940 (2025)', nominal: '+10.2%', cpi: 'CPI +5.7% (2023–25)', verdict: 'Above inflation', src: 'fee_dataset' }
   ];
 
   (function historySection() {
@@ -150,8 +158,11 @@
     'general-liability-plus-abuse premiums above $25,000 ' + srcRef('insurance2024') + '. USA Gymnastics raised its 2025-26 ' +
     'sanction fees citing insurance explicitly ' + srcRef('gym_fees') + '.</li>' +
     '<li><strong>Officials’ labor.</strong> Roughly 50,000 high-school officials left since 2018-19; leagues raised pay to retain them ' + srcRef('officials2024') + '.</li>' +
-    '<li><strong>Facilities and energy.</strong> Refrigeration is 40–50% of a rink’s utility bill; many acquired rinks were financially failing ' +
-    '(Black Bear’s own defense — and Reason magazine’s counter-argument notes it owns ~50 of ~2,100 US rinks) ' + srcRef('reason2026') + '.</li>' +
+    '<li><strong>Facilities and energy.</strong> Refrigeration is 40–50% of a rink’s utility bill and the 2022 energy shock raised rink operating ' +
+    'costs an estimated 40–60%; municipal rinks are raising rates without any PE owner (Worthington, MN went $85→$115/hr, +35%, to close a city deficit) ' +
+    srcRef('facility_rates') + '. The PE comparison cuts both ways though: in the same Detroit metro, Black Bear’s post-acquisition youth rate ($370/hr) ' +
+    'now exceeds nearby municipal rinks’ prime rates ($340/hr at Novi and Walker) ' + srcRef('facility_rates') + srcRef('usatoday_blackbear') + '. ' +
+    'Many acquired rinks were financially failing (Black Bear’s own defense — and Reason notes it owns ~50 of ~2,100 US rinks) ' + srcRef('reason2026') + '.</li>' +
     '<li><strong>Demand.</strong> Sports-tourism direct spending hit $52B in 2023, with 97% of destinations hosting youth events ' + srcRef('sportseta') + '; ' +
     'higher-income families are twice as likely to choose travel sports ' + srcRef('bloomberg2024') + '. Some of the price rise is families buying a more expensive product on purpose.</li>' +
     '</ul>' +
