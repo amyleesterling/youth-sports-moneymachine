@@ -88,10 +88,30 @@
       "short": "New York Life 2025 poll",
       "name": "New York Life Wealth Watch sports-parent poll",
       "url": "https://www.newyorklife.com/newsroom/parents-strained-by-youth-sports-costs",
+      "url2": "https://www.businesswire.com/news/home/20250422431192/en/New-York-Life-Wealth-Watch-Parents-Face-Growing-Financial-Strain-Pursuing-Youth-Sports-for-Their-Children",
       "year": 2025,
       "method": "parent survey",
-      "methodology": "1,036 sports parents fielded Mar 1-6, 2025; avg ~$3,000/yr across all kids' sports; ~$900 per season primary sport; 21% spend >$5,000/yr.",
+      "methodology": "1,036 US parents of kids 7-18 in youth sports (all tiers), fielded Mar 1-6, 2025, MoE +/-3pts. Avg ~$3,000/yr across all kids' sports; ~$900 per season primary sport; 21% spend >$5,000/yr; 20% spend >$1,500/season; 25% pulled from savings/emergency funds; 20% reduced or stopped a child's participation due to cost.",
       "flag": "single survey"
+    },
+    "groundwork_fees": {
+      "short": "Groundwork travel-team fee data",
+      "name": "Groundwork (youth-sports payments platform) - average travel-team fees by sport",
+      "url": "https://medium.com/@groundwork_bill/the-most-and-least-expensive-travel-sports-4f6664d3c2e2",
+      "year": 2024,
+      "method": "payments-platform data",
+      "methodology": "Average travel-team fees (fees only, excluding family travel and equipment): volleyball $3,159, gymnastics $2,778, ice hockey $2,529, baseball $1,894. Volleyball fees often bundle team travel.",
+      "flag": "platform-user sample, methodology not fully public"
+    },
+    "facility_rates": {
+      "short": "facility rental-rate collection (this site)",
+      "name": "Facility rental-rate collection: published hourly ice, court, turf and pool-lane rates at named facilities",
+      "url": "https://www.walkermi.gov/271/Private-Ice-Rental",
+      "url2": "https://cityofnovi.org/media/kxthfis4/ice-arena-deep-dive.pdf",
+      "year": 2026,
+      "method": "published fee schedules (collection)",
+      "methodology": "Municipal prime ice: Novi MI $340/hr (plan to $375), Walker MI $340/hr, Richfield MN $255/hr, Waukesha County WI $300/hr, Cabin John MD $390/hr; Worthington MN raised its youth association rate $85 to $115/hr (+35%, 2025) to close a deficit; Jefferson City MO raised rates April 2026; Stowe VT raised rates but increased its resident-youth discount to hold youth nonprofits flat. Guides put NYC-metro ice at $500-$700/hr and the 2022 energy shock at +40-60% on rink operating costs. Black Bear-owned rinks publish no rates (quote-only) - the $320-to-$370 Kensington figure came from the USA Today investigation.",
+      "flag": "rates move frequently; each figure carries its date"
     },
     "time2017": {
       "short": "TIME 2017 (WinterGreen)",

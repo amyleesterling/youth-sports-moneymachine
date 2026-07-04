@@ -9,10 +9,17 @@
   var V = window.VIZ;
 
   var SPORT_LABEL = {
-    soccer: 'Soccer', baseball: 'Baseball', cheer: 'Cheer', gymnastics: 'Gymnastics',
-    swim: 'Swimming', hockey: 'Ice hockey', golf: 'Golf', lacrosse: 'Lacrosse',
-    tennis: 'Tennis', volleyball: 'Volleyball'
+    soccer: 'Soccer', baseball: 'Baseball', basketball: 'Basketball', football: 'Football',
+    cheer: 'Cheer', gymnastics: 'Gymnastics', swim: 'Swimming', hockey: 'Ice hockey',
+    golf: 'Golf', lacrosse: 'Lacrosse', tennis: 'Tennis', volleyball: 'Volleyball'
   };
+
+  /* a row is "current" if any 4-digit year in its season string is >= 2023 */
+  function isCurrent(r) {
+    var m = String(r.season).match(/20\d\d/g);
+    if (!m) return true;
+    return m.some(function (y) { return +y >= 2023; });
+  }
   var TIER_LABEL = { rec: 'Rec / entry', comp: 'Competitive / club' };
   var PERIOD_LABEL = { year: '/yr', season: '/season', month: '/mo', event: '/event', week: '/week' };
 
@@ -30,9 +37,11 @@
   var intro = el('p', 'section-intro');
   intro.innerHTML = 'Survey averages hide the sticker prices, so here they are: <strong>list prices published by named ' +
     'clubs, gyms, leagues and tours</strong>, collected ' + FEES.collected + ', every row linked to the page it came from. ' +
+    'The chart shows <strong>current prices — 2023-24 through 2026-27 seasons, mostly 2025-26</strong> (each dot’s tooltip and ' +
+    'table row states its exact season; the handful of deliberately-kept older fees appear in the table only). ' +
     'Two honest caveats: these are asking prices, not what families ultimately spend (fees often exclude travel, gear and extras — ' +
     'read the “covers” column); and the sample skews toward organizations that publish fees at all. ' +
-    'Seasonal and annual fees are charted below; monthly and per-event fees are in the table.';
+    'Seasonal and annual fees are charted; monthly and per-event fees are in the table.';
   body.appendChild(intro);
 
   /* ---------- chart ---------- */
@@ -75,7 +84,7 @@
     if (feeChart) feeChart.destroy();
 
     var chartRows = FEES.rows.filter(function (r) {
-      return (r.period === 'year' || r.period === 'season') && r.amount > 0;
+      return (r.period === 'year' || r.period === 'season') && r.amount > 0 && isCurrent(r);
     });
     /* deterministic jitter so dots within a sport row don't stack */
     function jitter(i) { return ((i * 2654435761 % 1000) / 1000 - 0.5) * 0.55; }
@@ -171,7 +180,17 @@
     'and Black Bear’s Team Maryland publish fee <em>structures</em> with the dollar amounts kept behind login walls or “communicated with invitation.” ' +
     'Where prices are hardest to compare, they are also hardest to collect.</li>' +
     '<li><strong>Stated fees are floors, not totals.</strong> Read the “covers” column: most club fees exclude travel, uniforms and tournament ' +
-    'costs — the categories the survey data says grew fastest.</li>' +
+    'costs — the categories the survey data says grew fastest. Payments-platform data puts average travel-team <em>fees alone</em> at ' +
+    '$3,159 (volleyball), $2,778 (gymnastics), $2,529 (hockey) and $1,894 (baseball); all-in family budgets run far higher once ' +
+    '10–15 tournament weekends at $500–$1,500 each are added.</li>' +
+    '<li><strong>The travel tier has its own distribution.</strong> No survey publishes a median, but the bracket cuts are consistent: ' +
+    'among club/elite parents, ~20% were spending $1,000+/month per child ($12,000+/yr) back in 2016; ~24% of competitive-activity parents ' +
+    'top $4,000/yr; 21% of all sports parents now top $5,000/yr across their kids; and a documented stay-to-play block priced the same ' +
+    'Kansas City hotel at $170/night versus $85–$109 booked independently.</li>' +
+    '<li><strong>Below the fees sits the facility layer.</strong> Prime ice runs $200–$390/hr at municipal rinks (up to $500–$700/hr in the ' +
+    'NYC metro); after its 2024 acquisition, Black Bear’s Kensington rink charged the local youth association $370/hr — more than nearby ' +
+    'municipal rinks’ prime rates ($340) — while municipal rinks are raising rates too (+35% Worthington MN) under deficit and energy pressure. ' +
+    'Black Bear’s own rinks publish no rates at all; the only figures on record came from journalism.</li>' +
     '</ul>';
   body.appendChild(findings);
 
