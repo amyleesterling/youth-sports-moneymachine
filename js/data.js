@@ -48,6 +48,38 @@ window.DATA = {
      "source": "aspen2024"
     }
    ]
+  },
+  {
+   "id": "tackle_football",
+   "name": "Tackle football (context)",
+   "series": [
+    {
+     "year": 2019,
+     "nominal": 485,
+     "source": "aspen2019"
+    },
+    {
+     "year": 2024,
+     "nominal": 634,
+     "source": "aspen2024"
+    }
+   ]
+  },
+  {
+   "id": "flag_football",
+   "name": "Flag football (context)",
+   "series": [
+    {
+     "year": 2019,
+     "nominal": 268,
+     "source": "aspen2019"
+    },
+    {
+     "year": 2024,
+     "nominal": 444,
+     "source": "aspen2024"
+    }
+   ]
   }
  ],
  "reading": [
@@ -195,7 +227,15 @@ window.DATA = {
    "range_note": "Rec (AYSO): ~$120–$265/season. Club: published fees $2,494–$4,200/yr (Columbia Premier, West Side Alliance, SF Glens) before travel; all-in travel estimates $2,600–$10,500, ECNL/MLS NEXT $8,000–$15,000+ (thin sourcing). MLS pro academies are free.",
    "gaps": "No club preserves historical fee schedules publicly, so the survey series is the only price history. The 2022 point (open marker) came from a TeamSnap app-user sample Aspen cautions against comparing.",
    "verdict": "above",
-   "verdict_note": "Real spending rose ~38% 2019→2024 — clearly above inflation. The 3STEP league roll-up came late in that window; the increase predates it."
+   "verdict_note": "Real spending rose ~38% 2019→2024 — clearly above inflation. The 3STEP league roll-up came late in that window; the increase predates it.",
+   "mix_2019": {
+    "registration": 158,
+    "equipment": 125,
+    "travel": 107,
+    "lessons": 66,
+    "camps": 73
+   },
+   "hours_2019": 10.8
   },
   {
    "id": "baseball",
@@ -234,10 +274,18 @@ window.DATA = {
      "source": "unrivaled"
     }
    ],
-   "range_note": "Rec (Little League): ~$85–$300/season. Travel: team fees $1,000–$6,000/yr, tournament-heavy all-in $8,000–$10,000 (thin). Control case: family-owned Cooperstown Dreams Park went $995/player (2019) → $1,295 (2024–26), +30% with no PE owner.",
-   "gaps": "The pre-acquisition fee at Cooperstown All Star Village (bought 2022) is not publicly archived, so the cleanest before/after test in baseball can't be completed.",
+   "range_note": "Rec (Little League): ~$85–$300/season. Travel: team fees $1,000–$6,000/yr, tournament-heavy all-in $8,000–$10,000 (thin). Cooperstown natural experiment: family-owned Dreams Park went $995 (2019) → $1,295/player (2024–26), +30%; PE-owned All Star Village went $1,295 (2021, pre-acquisition form) → ~$1,395 (2026), +7.7% — below inflation, though a new ~$262 facility fee erodes some of that.",
+   "gaps": "The All Star Village comparison base year (2021) was a COVID-affected season, and Unrivaled added new fee lines (facility fee, higher team umpire fee) that a package-price comparison understates.",
    "verdict": "above",
-   "verdict_note": "Real spending rose ~37% 2019→2024, the most expensive of the three most-played sports. The independent Dreams Park raised fees +30% nominal over the same window — above inflation without PE."
+   "verdict_note": "Real spending rose ~37% 2019→2024, the most expensive of the three most-played sports. But the Cooperstown before/after cuts against the PE story: the independent park raised prices +30% while the PE-owned one raised its package just +7.7%.",
+   "mix_2019": {
+    "registration": 166,
+    "equipment": 121,
+    "travel": 175,
+    "lessons": 106,
+    "camps": 100
+   },
+   "hours_2019": 13.4
   },
   {
    "id": "cheer",
@@ -280,7 +328,7 @@ window.DATA = {
     }
    ],
    "range_note": "Gym-published: season tuition $1,595–$2,145 + competition fees $1,050–$1,200 (Champions Cheer); entries $100–$200/athlete regional, $400–$650 nationals; uniforms up to $1,000.",
-   "gaps": "The sport with the strongest private-equity story has the weakest price data: no survey series exists in any year, and Varsity's own event-fee history is sealed in litigation records.",
+   "gaps": "The sport with the strongest private-equity story has the weakest price data, now primary-verified in both waves: 2019 had 21 cheer respondents (grouped under 'Other sports'); 2024 had 58 cheer-primary athletes - below the six-sport breakout. Varsity's own event-fee history is sealed in litigation records. Closest published comparator: dance, at $2,048/yr in 2024, the costliest sport Aspen broke out.",
    "verdict": "unknown",
    "verdict_note": "Litigation evidence (two settlements totaling $126M, stay-to-play rebates of ~$4M/yr in court records) is consistent with above-competitive pricing, but no public price series can quantify it."
   },
@@ -298,9 +346,17 @@ window.DATA = {
    ],
    "events": [],
    "range_note": "Rec classes $132–$155/mo at named gyms; competitive team all-in from ~$5,000/yr (compulsory levels) to $20,000+/yr at Levels 9–10 (parent-reported, anecdotal). USA Gymnastics membership $20–$54/yr.",
-   "gaps": "4th most expensive sport in the 2019 survey, then never surveyed again publicly. USA Gymnastics raised 2025-26 sanction fees citing insurance costs — a documented non-PE cost driver. PE presence is embryonic (Powers Gymnastics roll-up, ~$17M Series A).",
+   "gaps": "4th most expensive sport in the 2019 survey, then never published again - the 2024 wave had 54 gymnastics-primary athletes, below Aspen's six-sport breakout (primary-verified). USA Gymnastics raised 2025-26 sanction fees citing insurance costs - a documented non-PE cost driver. PE presence is embryonic (Powers Gymnastics roll-up, ~$17M Series A).",
    "verdict": "unknown",
-   "verdict_note": "One data point. The documented cost pressure here is liability insurance, not ownership."
+   "verdict_note": "One data point. The documented cost pressure here is liability insurance, not ownership.",
+   "mix_2019": {
+    "registration": 152,
+    "equipment": 111,
+    "travel": 763,
+    "lessons": 422,
+    "camps": 104
+   },
+   "hours_2019": 9.7
   },
   {
    "id": "swim",
@@ -316,9 +372,17 @@ window.DATA = {
    ],
    "events": [],
    "range_note": "Club dues $1,800–$4,800/yr (Santa Clara SC $225–$300/mo) plus meet fees ($2–$13/event). USA Swimming athlete fee $62 (2020) → $70 (2024–25) — roughly flat in real terms; but club-level dues to the federation jump $70 → $225/yr in Sept 2025 (+221%), the first increase since at least 1990.",
-   "gaps": "No survey point after 2019. PE consolidation exists only in learn-to-swim schools (Streamline/SafeSplash), not competitive club swimming, which remains mostly nonprofit — a useful structural contrast.",
+   "gaps": "No survey point after 2019 - the 2024 wave had only 34 swim-primary athletes, too few to publish (primary-verified). PE consolidation exists only in learn-to-swim schools (Streamline/SafeSplash), not competitive club swimming, which remains mostly nonprofit - a useful structural contrast.",
    "verdict": "unknown",
-   "verdict_note": "One data point. Federation athlete fees tracked below inflation through 2024; the 2025 club-dues hike lands after the survey window."
+   "verdict_note": "One data point. Federation athlete fees tracked below inflation through 2024; the 2025 club-dues hike lands after the survey window.",
+   "mix_2019": {
+    "registration": 116,
+    "equipment": 59,
+    "travel": 388,
+    "lessons": 154,
+    "camps": 68
+   },
+   "hours_2019": 11.2
   },
   {
    "id": "hockey",
@@ -347,9 +411,17 @@ window.DATA = {
     }
    ],
    "range_note": "House league $400–$1,200; AA $3,000–$5,500; AAA registration $5,000–$14,000, all-in $11,500–$24,650 (guides, thin). Registration-platform data (PlayMetrics/Crossbar): 2025 avg club fee $7,055 AAA / $2,448 AA — +36.4% and +62.6% since 2015. USA Hockey national fee $70 → $89 (+27%) in three seasons.",
-   "gaps": "The most expensive sport in the 2019 survey was never re-surveyed publicly. Note the twist in the fee data: the elite AAA tier rose roughly with inflation over the decade; the mid-tier AA/A rose nearly twice as fast.",
+   "gaps": "The most expensive sport in the 2019 survey was never re-surveyed: the 2024 wave had only 16 hockey-primary athletes of 1,848 - too few to publish (primary-verified). The $2,583 figure recycled by 2024-26 press is 2019 data. Note the twist in the fee data: the elite AAA tier rose roughly with inflation over the decade; the mid-tier AA/A rose nearly twice as fast.",
    "verdict": "above",
-   "verdict_note": "Fee-schedule evidence: AA/A club fees +62.6% 2015–2025 vs all-items CPI up roughly a third — clearly above inflation. Also the clearest verified PE before/after: +15.6% ice-rental at a rink within months of acquisition."
+   "verdict_note": "Fee-schedule evidence: AA/A club fees +62.6% 2015–2025 vs all-items CPI up roughly a third — clearly above inflation. Also the clearest verified PE before/after: +15.6% ice-rental at a rink within months of acquisition.",
+   "mix_2019": {
+    "registration": 634,
+    "equipment": 389,
+    "travel": 829,
+    "lessons": 389,
+    "camps": 302
+   },
+   "hours_2019": 10
   },
   {
    "id": "golf",
@@ -365,9 +437,17 @@ window.DATA = {
    ],
    "events": [],
    "range_note": "Entry programs are cheap: First Tee $50–$195/season, PGA Jr. League $120/yr. Competitive: lessons $80–$120/hr, AJGA all-in $1,000–$3,000/yr. Counter-example: AJGA tournament entry was $280 in 2011 and $280–$295 today, with membership fees cut ~10% in 2022 — flat-to-down for 15 years, sponsor-subsidized (~70/30).",
-   "gaps": "No survey point after 2019. PE money in golf (>$5B recently) targets adult courses and entertainment venues, not junior competition — which shows fee restraint under a sponsorship model.",
+   "gaps": "No survey point after 2019 - the 2024 wave had only 15 golf-primary athletes, too few to publish (primary-verified). PE money in golf (>$5B recently) targets adult courses and entertainment venues, not junior competition - which shows fee restraint under a sponsorship model.",
    "verdict": "counter",
-   "verdict_note": "The clearest counter-example: junior tournament golf fees have been flat-to-down since 2011 — a large real-terms decline."
+   "verdict_note": "The clearest counter-example: junior tournament golf fees have been flat-to-down since 2011 — a large real-terms decline.",
+   "mix_2019": {
+    "registration": 81,
+    "equipment": 364,
+    "travel": 238,
+    "lessons": 88,
+    "camps": 113
+   },
+   "hours_2019": 9.3
   },
   {
    "id": "lacrosse",
@@ -396,9 +476,17 @@ window.DATA = {
     }
    ],
    "range_note": "Rec/town $50–$300/season + $35 USA Lacrosse membership. Club: dues $2,500–$7,000/yr, all-in $5,000–$10,000 (parent-documented log). Equipment is the signature cost: $600–$1,000 to outfit a club player.",
-   "gaps": "Lacrosse was 3STEP's first roll-up sport — and no before/after pricing at any acquired club has entered the public record. The sport has exactly one national survey point.",
+   "gaps": "Lacrosse was 3STEP's first roll-up sport - and no before/after pricing at any acquired club has entered the public record. One national survey point (2019); the 2024 wave had only 13 lacrosse-primary athletes, too few to publish (primary-verified).",
    "verdict": "unknown",
-   "verdict_note": "One data point, and the PE-effect question is untestable with public data — the gap itself is the finding."
+   "verdict_note": "One data point, and the PE-effect question is untestable with public data — the gap itself is the finding.",
+   "mix_2019": {
+    "registration": 411,
+    "equipment": 280,
+    "travel": 281,
+    "lessons": 68,
+    "camps": 231
+   },
+   "hours_2019": 14.2
   },
   {
    "id": "tennis",
@@ -421,20 +509,28 @@ window.DATA = {
     }
    ],
    "range_note": "USTA junior membership is free; sanctioned entries capped ~$47. The money is court time ($40–$100/hr indoor) and coaching ($60–$150/hr); competitive-track all-in guides run $10,000–$40,000/yr (weakly sourced). Elite anchor: IMG boarding $86,400 (2023) → ~$93,900 (2025).",
-   "gaps": "Thinnest data of any sport here. No club-level roll-up exists — PE entered at the academy layer (IMG) only, since an individual sport with public courts offers no league to consolidate.",
+   "gaps": "Thinnest data of any sport here: one survey point, and only 31 tennis-primary athletes in the 2024 wave (primary-verified). No club-level roll-up exists - PE entered at the academy layer (IMG) only, since an individual sport with public courts offers no league to consolidate.",
    "verdict": "unknown",
-   "verdict_note": "One data point. Structure suggests why PE skipped it: nothing to roll up."
+   "verdict_note": "One data point. Structure suggests why PE skipped it: nothing to roll up.",
+   "mix_2019": {
+    "registration": 115,
+    "equipment": 122,
+    "travel": 352,
+    "lessons": 471,
+    "camps": 95
+   },
+   "hours_2019": 8.8
   },
   {
    "id": "volleyball",
    "name": "Club volleyball",
-   "confidence": "anecdotal",
-   "confidence_reason": "The single 2019 figure survives only in a third-party reproduction of Aspen's table, unverified at the primary source.",
+   "confidence": "thin",
+   "confidence_reason": "One national survey point (2019: $595.49, verified in the primary Utah State report); nothing after.",
    "series": [
     {
      "year": 2019,
      "nominal": 595,
-     "source": "vb_2019_repro"
+     "source": "aspen2019"
     }
    ],
    "events": [
@@ -452,9 +548,17 @@ window.DATA = {
     }
    ],
    "range_note": "Club season $3,000–$5,000 typical; national/travel teams $4,000–$6,000 before player travel (Cincy Crush: $1,650 regional tier). Qualifier entries ~$1,000/team plus stay-to-play: ~15 room-nights minimum booked through official housing or the team forfeits its spot.",
-   "gaps": "Heavy consolidation (3STEP, LOVB's 77-location network) with essentially no public price history to test it against. The 2019 survey figure could not be verified at any Aspen URL.",
+   "gaps": "Heavy consolidation (3STEP, LOVB's 77-location network) with essentially no public price history to test it against: one survey point in 2019, and only 58 volleyball-primary athletes in the 2024 wave, below the six-sport breakout threshold (primary-verified).",
    "verdict": "unknown",
-   "verdict_note": "The stay-to-play mechanics are well documented; their price effect is not. No usable series."
+   "verdict_note": "The stay-to-play mechanics are well documented; their price effect is not. No usable series.",
+   "mix_2019": {
+    "registration": 242,
+    "equipment": 66,
+    "travel": 170,
+    "lessons": 53,
+    "camps": 54
+   },
+   "hours_2019": 12.8
   }
  ],
  "cpi": {
@@ -514,8 +618,8 @@ window.DATA = {
    "url": "https://www.aspeninstitute.org/wp-content/uploads/2025/08/FINAL-Utah-State-Parent-Survey-Report.pdf",
    "year": 2019,
    "method": "parent survey",
-   "methodology": "National survey of 1,032 parents of youth-sport participants (oldest active child); spending per child, per sport, per year across registration, equipment, travel, lessons, camps.",
-   "flag": "excerpt-verified; per-sport table cross-checked against ESPN, Money.com and Project Play reproductions"
+   "methodology": "National survey of 1,032 parents of youth-sport participants (oldest active child); spending per child, per sport, per year across registration, equipment, travel, lessons, camps. Per-sport means (Table, p.15): baseball $659.96, basketball $426.78, field hockey $2,124.62, golf $925.38, gymnastics $1,580.28, ice hockey $2,582.74, lacrosse $1,289.22, soccer $536.90, swimming $786.03, tennis $1,170.09, volleyball $595.49, all sports $692.53 (range $0-$34,900). Cheerleading had only 21 respondents, grouped under 'Other sports' - no cheer figure exists in the primary data.",
+   "flag": "primary-verified - full report PDF obtained and read directly; cost-relevant tables reproduced in this repo at data/raw/aspen-2019-utah-state-survey-excerpt.md"
   },
   "aspen2022": {
    "n": 2,
@@ -535,8 +639,8 @@ window.DATA = {
    "url2": "https://www.aspeninstitute.org/wp-content/uploads/2025/06/National-Youth-Sports-Parent-Survey-FINAL.pdf",
    "year": 2024,
    "method": "parent survey",
-   "methodology": "Nationally representative online survey of 1,848 youth-sports parents (children 6-18), all 50 states + DC, fielded Nov-Dec 2024. Spending on child's primary sport across registration, travel/lodging, equipment, private lessons, camps. Source of the headline '46% increase since 2019 ... twice the rate of price inflation.'",
-   "flag": "excerpt-verified; per-sport appendix beyond baseball/soccer/basketball not retrievable — a real gap noted on the page"
+   "methodology": "Nationally representative online survey of 1,848 youth-sports parents (children 6-18), all 50 states + DC, fielded Nov-Dec 2024. Primary-sport spending table (p.25): registration $196.98, equipment $164.59, travel $278.03, lessons $183.36, camps $148.44, other $42.75, TOTAL $1,015.64 (range $0-$24,600); other-sports spending $528.71. Per-sport breakout (p.114) covers ONLY six sports: basketball $875.97, soccer $910.22, baseball $1,112.50, tackle football $633.72, flag football $444.04, dance $2,048.31. Hockey/golf/lacrosse/tennis/swim/volleyball/cheer were not broken out - their primary-sport counts (16/15/13/31/34/58/58) were too small. Source of the headline '46% increase since 2019 ... twice the rate of price inflation.'",
+   "flag": "primary-verified - full report obtained and read directly; cost-relevant tables reproduced in this repo at data/raw/aspen-2024-parent-survey-excerpt.md"
   },
   "bls_cpi": {
    "n": 4,
@@ -795,15 +899,15 @@ window.DATA = {
    "methodology": "Cincy Crush 2026: $1,650/player regional team (9 tournament days). LA Volleyball Club 2025-26: base fees + $650 additional dues per travel tournament. Industry range: national/travel teams $4,000-$6,000/season, average club $3,000-$5,000, excluding player travel and uniforms.",
    "flag": "current-year snapshots; no volleyball figure exists in any Aspen public release"
   },
-  "vb_2019_repro": {
+  "casv_2021": {
    "n": 29,
-   "short": "2019 table reproduction (volleyball)",
-   "name": "PlaygroundEquipment.com reproduction of the Aspen/Utah State 2019 per-sport table",
-   "url": "https://www.playgroundequipment.com/the-average-cost-of-each-childrens-sport/",
-   "year": 2019,
-   "method": "parent survey (secondary reproduction)",
-   "methodology": "Reproduces the 2019 Aspen/USU table including volleyball at $595/yr. This value could not be confirmed at an Aspen URL - single-source reproduction.",
-   "flag": "UNVERIFIED at primary source; single-source - treated as anecdotal-grade"
+   "short": "Cooperstown All Star Village 2021 form",
+   "name": "Cooperstown All Star Village 2021 team registration form (pre-acquisition)",
+   "url": "https://cdn2.sportngin.com/attachments/document/9625-2219403/Cooperstown_All_Star_Village_2021_Team_Registration_Form.pdf",
+   "year": 2021,
+   "method": "published fee schedule",
+   "methodology": "All-inclusive package $1,295.00 per player/coach (2021 season, pre-acquisition by Harris/Blitzer in late 2022); $1,295 no-umpire fee per team; $650 bunkhouse fee ($250 refundable). Completes the before/after test: package ~$1,395/player in 2026 under Unrivaled = +7.7% nominal over five years vs ~+19% CPI - a real-terms decline on the headline package, though a new ~$262 facility fee erodes part of that.",
+   "flag": "primary-verified - original PDF obtained and read directly; note 2021 was a COVID-affected season"
   },
   "usav_stayplay": {
    "n": 30,
@@ -899,8 +1003,8 @@ window.DATA = {
    "url2": "https://www.sportspro.com/news/unrivaled-sports-youth-harris-blitzer-investment-dicks-sporting-goods-may-2025/",
    "year": 2025,
    "method": "deal record",
-   "methodology": "Harris/Blitzer bought Cooperstown All Star Village for $116M (late 2022) and majority of Ripken Baseball; launched Unrivaled Sports Mar 27, 2024 (Chernin Group investment); $120M round led by Dick's Sporting Goods, May 2025. All Star Village ~$1,395/player + fees (2026); pre-acquisition fee not publicly archived - before/after incomplete.",
-   "flag": "before/after at All Star Village incomplete (pre-2022 fee not found)"
+   "methodology": "Harris/Blitzer bought Cooperstown All Star Village for $116M (late 2022) and majority of Ripken Baseball; launched Unrivaled Sports Mar 27, 2024 (Chernin Group investment); $120M round led by Dick's Sporting Goods, May 2025. All Star Village ~$1,395/player + ~$262 facility fee (2026), vs $1,295/player pre-acquisition (2021 registration form) - see the CASV 2021 source.",
+   "flag": "current (2026) fee figures excerpt-verified via LeagueApps registration pages"
   },
   "blackbear": {
    "n": 39,
