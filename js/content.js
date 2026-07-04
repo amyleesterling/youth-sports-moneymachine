@@ -184,6 +184,18 @@
     'real, but too small a category to move the total.</li>' +
     '</ul>' +
 
+    '<h3>Three more findings from the primary 2019 data</h3>' +
+    '<ul class="method">' +
+    '<li><strong>Cost is rarely why kids quit.</strong> Of all reasons parents gave for a child discontinuing a sport, “increasing expenses” was ' +
+    'cited just <strong>3.1%</strong> of the time — versus 22.5% for diminishing enjoyment and 14.8% for interest in another sport ' + srcRef('aspen2019') + '. ' +
+    'Price pressure shows up in family budgets long before it shows up in quit rates.</li>' +
+    '<li><strong>Families spend significantly more on daughters.</strong> Parents were more likely to cross every income-share threshold for girls ' +
+    '(28.9% vs 23.0% spent >1% of income; 6.9% vs 4.1% spent >5%), driven by travel ($404 vs $155 for single-sport athletes) and private lessons ' +
+    '($282 vs $164) — both statistically significant ' + srcRef('aspen2019') + '.</li>' +
+    '<li><strong>Geography moves the bill ~2.6x.</strong> Across Aspen’s 13 community samples, average per-sport spending ran from $440 ' +
+    '(Philadelphia/Camden) to $1,153 (Columbus) against the $693 national mean ' + srcRef('aspen2019') + ' — market structure varies city by city, ' +
+    'which is exactly what the chokepoint theory of pricing would predict.</li>' +
+    '</ul>' +
     '<h3>What is asserted but unquantified</h3>' +
     '<p class="method">Some of the most repeated claims have no measured series behind them: hours-per-week before 2019 ' +
     '(no survey measured it), “everyone buys private lessons now” (dollars are tracked, incidence over time is not), ' +

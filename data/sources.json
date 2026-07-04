@@ -9,7 +9,7 @@
       "year": 2019,
       "method": "parent survey",
       "methodology": "National survey of 1,032 parents of youth-sport participants (oldest active child); spending per child, per sport, per year across registration, equipment, travel, lessons, camps. Per-sport means (Table, p.15): baseball $659.96, basketball $426.78, field hockey $2,124.62, golf $925.38, gymnastics $1,580.28, ice hockey $2,582.74, lacrosse $1,289.22, soccer $536.90, swimming $786.03, tennis $1,170.09, volleyball $595.49, all sports $692.53 (range $0-$34,900). Cheerleading had only 21 respondents, grouped under 'Other sports' - no cheer figure exists in the primary data.",
-      "flag": "primary-verified - full report PDF obtained and read directly"
+      "flag": "primary-verified - full report PDF obtained and read directly; cost-relevant tables reproduced in this repo at data/raw/aspen-2019-utah-state-survey-excerpt.md"
     },
     "aspen2022": {
       "short": "Aspen/TeamSnap fall 2022 survey",

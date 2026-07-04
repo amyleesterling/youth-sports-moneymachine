@@ -375,6 +375,16 @@
     }
     if (sport.gaps) card.appendChild(el('p', 'gap-note', sport.gaps));
 
+    if (sport.mix_2019) {
+      var mixOrder = Object.keys(sport.mix_2019).sort(function (a, b) { return sport.mix_2019[b] - sport.mix_2019[a]; });
+      var mixNote = el('p', 'range-note');
+      mixNote.appendChild(el('strong', null, 'Where the money went (2019): '));
+      mixNote.appendChild(document.createTextNode(
+        mixOrder.map(function (k) { return k + ' ' + fmt$(sport.mix_2019[k]); }).join(' · ') +
+        (sport.hours_2019 ? ' — at ' + sport.hours_2019 + ' hrs/week of play' : '')));
+      card.appendChild(mixNote);
+    }
+
     /* table view — the WCAG-clean twin */
     var det = el('details');
     det.appendChild(el('summary', null, 'Data table & sources'));
