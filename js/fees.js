@@ -153,6 +153,28 @@
     buildFeeChart();
   };
 
+  /* ---------- findings ---------- */
+  var findings = el('div');
+  findings.innerHTML =
+    '<h3>What the sticker prices show</h3>' +
+    '<ul class="method">' +
+    '<li><strong>The rec-to-club cliff is the real story.</strong> In every sport, the jump from rec to competitive is 5–20x: ' +
+    '$35 town-league baseball vs $2,850 select teams; $50 YMCA volleyball vs $7,595 national club teams; $75 rec cheer vs ~$5,800/yr ' +
+    'all-in elite programs; $325 house hockey vs $5,950 AAA travel.</li>' +
+    '<li><strong>Same-club fee changes cluster around or above inflation.</strong> Year-over-year pairs found in this sweep: TAC Titans swim ' +
+    'dues +5.3–5.5%, NCVA volleyball league entry +5.9%, LI Yellow Jackets lacrosse +10.3%, Utah Surf soccer club-fee floor +44%, ' +
+    'Nashville youth hockey house league +33% over three seasons, Twisters gymnastics meet-entry floor roughly doubled in two — against ' +
+    'CPI running ~2.5–3%/yr. Counter-moves exist too: Stingray cheer installments flat into 2026-27, Cooperstown Dreams Park flat 2025→2026, ' +
+    'Madlax lacrosse camps flat, and the NXT lacrosse tournament (3STEP-owned) up only ~9% since 2020.</li>' +
+    '<li><strong>Fee opacity correlates with consolidation.</strong> A pattern the collection itself surfaced: town leagues, YMCAs and independent ' +
+    'clubs publish full fee tables, while 3STEP-owned elite clubs (Team 91, 3d Lacrosse), LOVB-network volleyball clubs (A5, Tstreet, Houston Skyline) ' +
+    'and Black Bear’s Team Maryland publish fee <em>structures</em> with the dollar amounts kept behind login walls or “communicated with invitation.” ' +
+    'Where prices are hardest to compare, they are also hardest to collect.</li>' +
+    '<li><strong>Stated fees are floors, not totals.</strong> Read the “covers” column: most club fees exclude travel, uniforms and tournament ' +
+    'costs — the categories the survey data says grew fastest.</li>' +
+    '</ul>';
+  body.appendChild(findings);
+
   /* ---------- filter + table ---------- */
   var controls = el('div', 'controls');
   var seg = el('div', 'seg');

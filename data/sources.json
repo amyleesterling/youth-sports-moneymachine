@@ -658,6 +658,15 @@
       "methodology": "Documents the mandatory hotel/commuter package structure at Worlds (2021 rates $230-$315/room/night at designated resorts; paid bids up to $650/athlete).",
       "flag": "structure verified; pull PDFs for current rates"
     },
+    "fee_dataset": {
+      "short": "club-level fee dataset (this site)",
+      "name": "Published-fee dataset: 244 fee points from ~200 named clubs, gyms, leagues, tours and governing bodies (data/fees.json)",
+      "url": "data/fees.json",
+      "year": 2026,
+      "method": "published fee schedules (collection)",
+      "methodology": "Collected July 2026 by systematic search-extraction of organizations' own fee pages, tryout packets, handbooks and registration PDFs across all ten sports and 25+ states. Every row records organization, location, tier, season, amount, period, coverage notes and the source URL. Fees recorded exactly as stated (per season, month, year, week or event) - never annualized or estimated. Rows traceable only to third-party aggregators were excluded.",
+      "flag": "list prices, not family spend; sample skews toward organizations that publish fees - several PE-owned club networks do not"
+    },
     "fusion_complaint": {
       "short": "Fusion Elite complaint (primary)",
       "name": "Fusion Elite All Stars v. Varsity Brands - consolidated class-action complaint (W.D. Tenn.)",
