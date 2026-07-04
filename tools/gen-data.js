@@ -27,7 +27,19 @@ if (missing.size) {
   process.exit(1);
 }
 
-const out = 'window.DATA = ' + JSON.stringify({
+let fees = { collected: '', org_count: 0, rows: [] };
+const feesPath = path.join(root, 'data/fees.json');
+if (fs.existsSync(feesPath)) {
+  fees = JSON.parse(fs.readFileSync(feesPath, 'utf8'));
+  fees.org_count = new Set(fees.rows.map(r => r.org)).size;
+  const badRows = fees.rows.filter(r => !r.org || !r.url || !(r.amount > 0) || !r.sport || !r.season);
+  if (badRows.length) {
+    console.error('fees.json rows missing required fields:', JSON.stringify(badRows.slice(0, 3)));
+    process.exit(1);
+  }
+}
+
+const out = 'window.FEES = ' + JSON.stringify(fees) + ';\nwindow.DATA = ' + JSON.stringify({
   headline: sports.headline,
   combined_base_year: sports.combined_base_year,
   context_series: sports.context_series || [],

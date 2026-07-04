@@ -236,3 +236,12 @@ footer { margin-top: 70px; padding-top: 20px; border-top: 1px solid var(--grid);
   .chart-box.tall { height: 340px; }
   .theme-toggle { float: none; margin: 16px 0 0; }
 }
+
+/* fee dataset tier hues (validated aqua/blue pair) */
+:root { --tier-rec: #1baf7a; --tier-comp: #2a78d6; }
+:root[data-theme="dark"] { --tier-rec: #199e70; --tier-comp: #3987e5; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --tier-rec: #199e70; --tier-comp: #3987e5; }
+}
+#fees .seg { flex-wrap: wrap; }
+#fees .seg button { padding: 6px 11px; }
