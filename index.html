@@ -23,58 +23,41 @@
 
 <div class="stat-row" id="stat-row">
   <div class="stat-tile">
-    <p class="label">Avg. spend per child, per sport — 2019</p>
+    <p class="label">Survey average, all kids &amp; all levels — 2019</p>
     <div class="value" id="stat-2019">—</div>
-    <p class="note">Aspen Institute / Utah State survey <a class="footnote-ref" href="#src-aspen2019">[src]</a></p>
+    <p class="note">Per child, primary sport. Blends mostly-rec kids with travel families <a class="footnote-ref" href="#src-aspen2019">[src]</a></p>
   </div>
   <div class="stat-tile">
-    <p class="label">Avg. spend per child, per sport — 2024</p>
+    <p class="label">Survey average, all kids &amp; all levels — 2024</p>
     <div class="value" id="stat-2024">—</div>
-    <p class="note">Same survey series, 2024 wave <a class="footnote-ref" href="#src-aspen2024">[src]</a></p>
+    <p class="note">Same series, 2024 wave; range ran $0–$24,600 <a class="footnote-ref" href="#src-aspen2024">[src]</a></p>
   </div>
   <div class="stat-tile">
-    <p class="label">Nominal increase 2019 → 2024</p>
+    <p class="label">Increase 2019 → 2024</p>
     <div class="value" id="stat-nominal">—</div>
-    <p class="note">vs <span id="stat-cpi">—</span> CPI over the same window</p>
+    <p class="note">vs <span id="stat-cpi">—</span> CPI — about <span id="stat-real">—</span> in real terms</p>
   </div>
   <div class="stat-tile">
-    <p class="label">Real increase (inflation-adjusted)</p>
-    <div class="value" id="stat-real">—</div>
-    <p class="note">The part inflation can't explain</p>
+    <p class="label">The travel-tier reality</p>
+    <div class="value">$3,000+</div>
+    <p class="note">Typical annual all-in for travel-sports families; 21% top $5,000/yr <a class="footnote-ref" href="#src-nyl2025">[src]</a></p>
   </div>
 </div>
-
-<section id="sport-by-sport">
-  <h2>Sport by sport</h2>
-  <p class="section-intro" id="grid-intro">Each chart shows average annual family spending per child
-    in that sport, from parent surveys — <strong>nominal</strong> (light) and in
-    <strong>constant 2025 dollars</strong> (dark). If the dark line is flat, inflation explains the increase.
-    Vertical ticks mark private-equity and ownership events in that sport. Badges rate how much
-    data actually exists — a lot of the loudest claims rest on the thinnest series.</p>
-  <div class="controls">
-    <div class="seg" id="scale-toggle" role="group" aria-label="Y-axis scale">
-      <button type="button" data-scale="indep" aria-pressed="true">Per-sport scale</button>
-      <button type="button" data-scale="same" aria-pressed="false">Same scale</button>
-    </div>
-    <span class="hint">Same scale makes cross-sport comparison honest; per-sport scale shows each trend's shape.</span>
-  </div>
-  <div class="legend">
-    <span class="item"><span class="key real"></span>Real (2025 $)</span>
-    <span class="item"><span class="key nominal"></span>Nominal $</span>
-    <span class="item"><span class="key pe"></span>PE / ownership event</span>
-  </div>
-  <div class="grid" id="sports-grid"></div>
-</section>
+<p class="section-intro" style="margin-top:18px"><strong>Why the averages look low:</strong> only about 17% of kids play travel/club as their
+  primary setting <a class="footnote-ref" href="#src-aspen2024">[src]</a> — the survey average blends a $50 town-league season with a
+  $12,000 AAA hockey year. The averages are the only numbers with a real trend line, so they lead the trend chart below;
+  the club-level fee dataset after it shows what the travel tier actually costs.</p>
 
 <section id="combined">
-  <h2>All sports vs inflation, one frame</h2>
-  <p class="section-intro">Every sport's survey series indexed to 100 at 2019 (nominal), against
-    overall CPI and recreation-services CPI. Anything above the red CPI line grew faster than
-    inflation. Click a sport to highlight it.</p>
+  <h2>The trend: youth sports vs inflation</h2>
+  <p class="section-intro">Every multi-year survey series that exists, indexed to 100 at 2019 (nominal),
+    against overall CPI and recreation-services CPI. <strong>Anything above the red CPI line grew faster
+    than inflation</strong> — and everything did. Click a sport to highlight it; open markers are the
+    2022 wave, which used a different sample.</p>
   <div class="chips" id="combined-chips"></div>
   <div class="card">
     <div class="chart-box tall">
-      <canvas id="combined-canvas" role="img" aria-label="All sports indexed to 100 at 2019 versus CPI. Underlying data available in each sport's table above."></canvas>
+      <canvas id="combined-canvas" role="img" aria-label="All sports indexed to 100 at 2019 versus CPI. Underlying data available in each sport's table below."></canvas>
     </div>
   </div>
 </section>
@@ -82,6 +65,30 @@
 <section id="fees">
   <h2 id="fees-title">Straight from the clubs: the published-fee dataset</h2>
   <div id="fees-body"></div>
+</section>
+
+<section id="sport-by-sport">
+  <h2>Sport by sport</h2>
+  <p class="section-intro" id="grid-intro">One card per sport. Where multiple comparable survey waves exist
+    (soccer, baseball), the chart is the spending trend — <strong>nominal</strong> (light) and
+    <strong>constant 2025 dollars</strong> (dark), with vertical ticks marking private-equity events.
+    Where the survey record is a single point, pretending there's a trend would be dishonest — so those cards
+    chart <strong>today's published fee ranges from the club dataset above</strong> (rec vs club tiers), with the
+    lone survey point and the gaps stated in the text. Badges rate how much data actually exists — the loudest
+    claims often rest on the thinnest series.</p>
+  <div class="controls">
+    <div class="seg" id="scale-toggle" role="group" aria-label="Y-axis scale">
+      <button type="button" data-scale="indep" aria-pressed="true">Per-sport scale</button>
+      <button type="button" data-scale="same" aria-pressed="false">Same scale</button>
+    </div>
+    <span class="hint">Applies to the trend charts (soccer, baseball).</span>
+  </div>
+  <div class="legend">
+    <span class="item"><span class="key real"></span>Real (2025 $)</span>
+    <span class="item"><span class="key nominal"></span>Nominal $</span>
+    <span class="item"><span class="key pe"></span>PE / ownership event</span>
+  </div>
+  <div class="grid" id="sports-grid"></div>
 </section>
 
 <section id="history">

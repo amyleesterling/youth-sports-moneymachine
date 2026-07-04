@@ -236,10 +236,26 @@
     return chart;
   }
 
-  /* cheer: no time series exists — tier ranges as floating bars */
-  function rangeChart(canvas, sport) {
+  /* published-fee ranges for this sport, computed from the club dataset */
+  function feeRangeRows(sportId) {
+    var fees = window.FEES;
+    if (!fees || !fees.rows) return [];
+    var out = [];
+    [['rec', 'Rec / entry'], ['comp', 'Club / travel']].forEach(function (tier) {
+      var vals = fees.rows.filter(function (r) {
+        return r.sport === sportId && r.tier === tier[0] &&
+          (r.period === 'season' || r.period === 'year') && r.amount > 0;
+      }).map(function (r) { return r.amount; });
+      if (vals.length >= 2) {
+        out.push({ tier: tier[1], low: Math.min.apply(null, vals), high: Math.max.apply(null, vals), n: vals.length });
+      }
+    });
+    return out;
+  }
+
+  /* no honest time series — tier ranges as floating bars */
+  function rangeChart(canvas, rows) {
     var t = theme();
-    var rows = sport.range_chart;
     var opts = {
       indexAxis: 'y',
       responsive: true,
@@ -252,7 +268,8 @@
             title: function (items) { return items.length ? rows[items[0].dataIndex].tier : ''; },
             label: function (item) {
               var r = rows[item.dataIndex];
-              return ' ' + fmt$(r.low) + ' – ' + fmt$(r.high) + '  reported range (nominal, current)';
+              return ' ' + fmt$(r.low) + ' – ' + fmt$(r.high) +
+                (r.n ? '  across ' + r.n + ' published fees' : '  reported range (nominal, current)');
             }
           }
         })
@@ -280,7 +297,9 @@
         labels: rows.map(function (r) { return r.tier; }),
         datasets: [{
           data: rows.map(function (r) { return [r.low, r.high]; }),
-          backgroundColor: t.real,
+          backgroundColor: rows.map(function (r) {
+            return /rec/i.test(r.tier) ? cssVar('--tier-rec') : cssVar('--tier-comp');
+          }),
           borderColor: t.surface,
           borderWidth: 0,
           borderRadius: 4,
@@ -335,6 +354,21 @@
     head.appendChild(badge);
     card.appendChild(head);
 
+    /* pick the honest chart form */
+    var comparable = (sport.series || []).filter(function (p) { return !p.frame_flag; });
+    var chartKind, feeRows = null;
+    if (comparable.length >= 2) {
+      chartKind = 'line';
+    } else if (sport.range_chart && sport.range_chart.length) {
+      chartKind = 'range';
+      feeRows = sport.range_chart;
+    } else {
+      feeRows = feeRangeRows(sport.id);
+      chartKind = feeRows.length ? 'range' : 'line';
+    }
+    sport.$chartKind = chartKind;
+    sport.$feeRows = feeRows;
+
     var cagrLine = el('p', 'cagr');
     var c = cagr(sport.series || [], 'real');
     if (c !== null) {
@@ -343,18 +377,21 @@
       cagrLine.appendChild(el('strong', null, pct(c) + '/yr real CAGR'));
       cagrLine.appendChild(document.createTextNode(' (' + pct(cn) + ' nominal), ' + y0 + '–' + y1));
     } else if ((sport.series || []).length === 0) {
-      cagrLine.textContent = 'No survey series exists in any year — current reported ranges only.';
+      cagrLine.textContent = 'No survey figure exists in any year — bars show current published fees.';
     } else {
-      cagrLine.textContent = 'One survey point (' + sport.series[0].year + ') — no trend can honestly be drawn.';
+      var p0 = sport.series[0];
+      cagrLine.appendChild(document.createTextNode('One survey point ('));
+      cagrLine.appendChild(el('strong', null, p0.year + ': ' + fmt$(p0.nominal) + ' avg'));
+      cagrLine.appendChild(document.createTextNode(') — no honest trend line. Bars: published fees today.'));
     }
     card.appendChild(cagrLine);
 
     var box = el('div', 'chart-box');
     var canvas = document.createElement('canvas');
     canvas.setAttribute('role', 'img');
-    canvas.setAttribute('aria-label', sport.name + ': ' + ((sport.series || []).length ?
+    canvas.setAttribute('aria-label', sport.name + ': ' + (chartKind === 'line' ?
       'average annual family spending per child, nominal and inflation-adjusted, by survey year.' :
-      'reported current cost ranges by tier.') + ' Data also in the table below.');
+      'published fee ranges by tier from the club dataset.') + ' Data also in the table below.');
     box.appendChild(canvas);
     card.appendChild(box);
 
@@ -431,9 +468,9 @@
     card.appendChild(det);
 
     container.appendChild(card);
-    var chart = (sport.series || []).length
+    var chart = chartKind === 'line'
       ? sportChart(canvas, sport)
-      : rangeChart(canvas, sport);
+      : rangeChart(canvas, feeRows);
     charts.push({ chart: chart, kind: 'sport', sport: sport, canvas: canvas });
   }
 
@@ -573,9 +610,9 @@
     charts.forEach(function (entry) {
       if (entry.kind !== 'sport') return;
       entry.chart.destroy();
-      entry.chart = (entry.sport.series || []).length
+      entry.chart = entry.sport.$chartKind === 'line'
         ? sportChart(entry.canvas, entry.sport)
-        : rangeChart(entry.canvas, entry.sport);
+        : rangeChart(entry.canvas, entry.sport.$feeRows);
     });
   }
 
