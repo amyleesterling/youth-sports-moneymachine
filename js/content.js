@@ -27,9 +27,10 @@
     '<strong>$4M a year in hotel-room rebates</strong>, with kickbacks of $20/room or 30% of the booking agent’s ' +
     'commission ' + srcRef('okwatch_stayplay') + '. The Jones settlement bars stay-to-play at 35% of Varsity events ' +
     'through 2029.</p>' +
-    '<p><strong>What the price data shows: almost nothing.</strong> No national survey has ever published a cheer spending ' +
-    'figure — the 2019 Aspen/Utah State survey had just 21 cheerleading respondents, grouped under “Other sports” (verified in ' +
-    'the primary report), and no wave since has broken cheer out ' + srcRef('aspen2019') + '. Varsity’s own event-fee history is ' +
+    '<p><strong>What the price data shows: almost nothing — now verified in both survey reports.</strong> No national survey has ever ' +
+    'published a cheer spending figure: the 2019 wave had just 21 cheerleading respondents, grouped under “Other sports,” and the 2024 wave ' +
+    'had 58 cheer-primary athletes — below its six-sport breakout threshold ' + srcRef('aspen2019') + srcRef('aspen2024') + '. The closest ' +
+    'published comparator is dance, the costliest sport Aspen did break out in 2024 at $2,048/yr. Varsity’s own event-fee history is ' +
     'sealed in litigation filings. The best public numbers are gym-level: roughly $300–$1,000 for a rec season versus ' +
     '$5,000–$10,000 all-in for an all-star year ' + srcRef('cheer_gym_fees') + srcRef('promarket2020') + '. ' +
     'So the sport most often cited as proof that PE inflates youth sports cannot actually be tested against a price series. ' +
@@ -168,9 +169,10 @@
     'they are buying <strong>more sport</strong>. Aspen’s own category breakdown makes the decomposition unusually clean.</p>' +
     '<div class="card"><div class="chart-box" style="height:260px"><canvas id="category-canvas" role="img" ' +
     'aria-label="Spending per child per sport by category, 2019 versus 2024. Values in the text and sources."></canvas></div>' +
-    '<p class="range-note"><strong>Equipment is the alibi:</strong> gear grew +7% over five years — well under the +23% CPI — ' +
-    'while travel (+33%), registration (+34%), lessons (+37%) and camps (+37%) all grew at roughly twice inflation ' +
-    srcRef('aspen2024') + srcRef('aspen_hours') + '. The increase is services, not stuff.</p></div>' +
+    '<p class="range-note"><strong>Equipment is the alibi:</strong> comparing the two reports’ primary-sport tables directly, gear grew ' +
+    '+14% over five years — under the +23% CPI — while travel (+42%), lessons (+37%), registration (+58%) and camps (+84%) all outran inflation, ' +
+    'some by wide margins ' + srcRef('aspen2019') + srcRef('aspen2024') + '. The increase is services, not stuff. ' +
+    '(Aspen’s press release quotes a slightly different blended cut; these are the report tables themselves.)</p></div>' +
 
     '<h3>What is quantified</h3>' +
     '<ul class="method">' +
@@ -204,12 +206,14 @@
     'We flag these rather than chart them — <em>on this page, if it isn’t sourced, it isn’t plotted.</em></p>';
 
   /* category chart */
+  /* Primary-sport category tables from the two survey report PDFs (2019 p.15, 2024 p.25) —
+     an apples-to-apples comparison. The Feb 2025 press release quotes a different blended cut. */
   var CATS = [
-    { name: 'Travel', y2019: 196, y2024: 260 },
+    { name: 'Travel & lodging', y2019: 196, y2024: 278 },
+    { name: 'Registration', y2019: 125, y2024: 197 },
     { name: 'Private lessons', y2019: 134, y2024: 183 },
-    { name: 'Registration', y2019: 125, y2024: 168 },
-    { name: 'Equipment', y2019: 144, y2024: 154 },
-    { name: 'Camps', y2019: 81, y2024: 111 }
+    { name: 'Equipment', y2019: 144, y2024: 165 },
+    { name: 'Camps', y2019: 81, y2024: 148 }
   ];
   var catChart = null;
   function buildCategoryChart() {
@@ -366,8 +370,10 @@
     'event caused any price movement. Correlation is not causation, and with 2–3 survey points per decade the charts could not demonstrate causation even where it exists.</p>' +
     '<p><strong>Verification caveat.</strong> Research for this page was performed in a sandboxed environment whose network proxy blocked direct page fetches; ' +
     'most figures were verified against search-indexed excerpts of the cited pages (cross-checked across independent queries) rather than full-page reads. ' +
-    'Two primary documents were subsequently obtained and read in full: the 2019 Utah State survey report (confirming the entire per-sport table, including ' +
-    'volleyball, and cheer’s absence) and the Cooperstown All Star Village 2021 registration form — sources marked “primary-verified.” ' +
+    'Three primary documents were subsequently obtained and read in full: the 2019 Utah State survey report (confirming the entire per-sport table, including ' +
+    'volleyball, and cheer’s absence), the 2024 National Youth Sports Parent Survey (confirming the six-sport breakout and that no 2024 figure exists for the ' +
+    'other sports — their primary-sport samples were too small), and the Cooperstown All Star Village 2021 registration form — sources marked “primary-verified,” ' +
+    'with cost-relevant tables reproduced under data/raw/ in this site’s repository. ' +
     'Every source URL is listed below so every number can be re-verified. Nothing on this page is estimated from memory; where a figure could not be sourced, it is absent and the gap is stated.</p>';
 
   /* ---------- sources list (data-driven: textContent) ---------- */

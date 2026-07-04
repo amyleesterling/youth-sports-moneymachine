@@ -49,6 +49,38 @@
           "source": "aspen2024"
         }
       ]
+    },
+    {
+      "id": "tackle_football",
+      "name": "Tackle football (context)",
+      "series": [
+        {
+          "year": 2019,
+          "nominal": 485,
+          "source": "aspen2019"
+        },
+        {
+          "year": 2024,
+          "nominal": 634,
+          "source": "aspen2024"
+        }
+      ]
+    },
+    {
+      "id": "flag_football",
+      "name": "Flag football (context)",
+      "series": [
+        {
+          "year": 2019,
+          "nominal": 268,
+          "source": "aspen2019"
+        },
+        {
+          "year": 2024,
+          "nominal": 444,
+          "source": "aspen2024"
+        }
+      ]
     }
   ],
   "sports": [
@@ -193,7 +225,7 @@
         }
       ],
       "range_note": "Gym-published: season tuition $1,595\u2013$2,145 + competition fees $1,050\u2013$1,200 (Champions Cheer); entries $100\u2013$200/athlete regional, $400\u2013$650 nationals; uniforms up to $1,000.",
-      "gaps": "The sport with the strongest private-equity story has the weakest price data: the 2019 national survey had only 21 cheer respondents (grouped under 'Other sports', verified in the primary report), no survey since has published a figure, and Varsity's own event-fee history is sealed in litigation records.",
+      "gaps": "The sport with the strongest private-equity story has the weakest price data, now primary-verified in both waves: 2019 had 21 cheer respondents (grouped under 'Other sports'); 2024 had 58 cheer-primary athletes - below the six-sport breakout. Varsity's own event-fee history is sealed in litigation records. Closest published comparator: dance, at $2,048/yr in 2024, the costliest sport Aspen broke out.",
       "verdict": "unknown",
       "verdict_note": "Litigation evidence (two settlements totaling $126M, stay-to-play rebates of ~$4M/yr in court records) is consistent with above-competitive pricing, but no public price series can quantify it."
     },
@@ -211,7 +243,7 @@
       ],
       "events": [],
       "range_note": "Rec classes $132\u2013$155/mo at named gyms; competitive team all-in from ~$5,000/yr (compulsory levels) to $20,000+/yr at Levels 9\u201310 (parent-reported, anecdotal). USA Gymnastics membership $20\u2013$54/yr.",
-      "gaps": "4th most expensive sport in the 2019 survey, then never surveyed again publicly. USA Gymnastics raised 2025-26 sanction fees citing insurance costs \u2014 a documented non-PE cost driver. PE presence is embryonic (Powers Gymnastics roll-up, ~$17M Series A).",
+      "gaps": "4th most expensive sport in the 2019 survey, then never published again - the 2024 wave had 54 gymnastics-primary athletes, below Aspen's six-sport breakout (primary-verified). USA Gymnastics raised 2025-26 sanction fees citing insurance costs - a documented non-PE cost driver. PE presence is embryonic (Powers Gymnastics roll-up, ~$17M Series A).",
       "verdict": "unknown",
       "verdict_note": "One data point. The documented cost pressure here is liability insurance, not ownership.",
       "mix_2019": {
@@ -237,7 +269,7 @@
       ],
       "events": [],
       "range_note": "Club dues $1,800\u2013$4,800/yr (Santa Clara SC $225\u2013$300/mo) plus meet fees ($2\u2013$13/event). USA Swimming athlete fee $62 (2020) \u2192 $70 (2024\u201325) \u2014 roughly flat in real terms; but club-level dues to the federation jump $70 \u2192 $225/yr in Sept 2025 (+221%), the first increase since at least 1990.",
-      "gaps": "No survey point after 2019. PE consolidation exists only in learn-to-swim schools (Streamline/SafeSplash), not competitive club swimming, which remains mostly nonprofit \u2014 a useful structural contrast.",
+      "gaps": "No survey point after 2019 - the 2024 wave had only 34 swim-primary athletes, too few to publish (primary-verified). PE consolidation exists only in learn-to-swim schools (Streamline/SafeSplash), not competitive club swimming, which remains mostly nonprofit - a useful structural contrast.",
       "verdict": "unknown",
       "verdict_note": "One data point. Federation athlete fees tracked below inflation through 2024; the 2025 club-dues hike lands after the survey window.",
       "mix_2019": {
@@ -276,7 +308,7 @@
         }
       ],
       "range_note": "House league $400\u2013$1,200; AA $3,000\u2013$5,500; AAA registration $5,000\u2013$14,000, all-in $11,500\u2013$24,650 (guides, thin). Registration-platform data (PlayMetrics/Crossbar): 2025 avg club fee $7,055 AAA / $2,448 AA \u2014 +36.4% and +62.6% since 2015. USA Hockey national fee $70 \u2192 $89 (+27%) in three seasons.",
-      "gaps": "The most expensive sport in the 2019 survey was never re-surveyed publicly. Note the twist in the fee data: the elite AAA tier rose roughly with inflation over the decade; the mid-tier AA/A rose nearly twice as fast.",
+      "gaps": "The most expensive sport in the 2019 survey was never re-surveyed: the 2024 wave had only 16 hockey-primary athletes of 1,848 - too few to publish (primary-verified). The $2,583 figure recycled by 2024-26 press is 2019 data. Note the twist in the fee data: the elite AAA tier rose roughly with inflation over the decade; the mid-tier AA/A rose nearly twice as fast.",
       "verdict": "above",
       "verdict_note": "Fee-schedule evidence: AA/A club fees +62.6% 2015\u20132025 vs all-items CPI up roughly a third \u2014 clearly above inflation. Also the clearest verified PE before/after: +15.6% ice-rental at a rink within months of acquisition.",
       "mix_2019": {
@@ -302,7 +334,7 @@
       ],
       "events": [],
       "range_note": "Entry programs are cheap: First Tee $50\u2013$195/season, PGA Jr. League $120/yr. Competitive: lessons $80\u2013$120/hr, AJGA all-in $1,000\u2013$3,000/yr. Counter-example: AJGA tournament entry was $280 in 2011 and $280\u2013$295 today, with membership fees cut ~10% in 2022 \u2014 flat-to-down for 15 years, sponsor-subsidized (~70/30).",
-      "gaps": "No survey point after 2019. PE money in golf (>$5B recently) targets adult courses and entertainment venues, not junior competition \u2014 which shows fee restraint under a sponsorship model.",
+      "gaps": "No survey point after 2019 - the 2024 wave had only 15 golf-primary athletes, too few to publish (primary-verified). PE money in golf (>$5B recently) targets adult courses and entertainment venues, not junior competition - which shows fee restraint under a sponsorship model.",
       "verdict": "counter",
       "verdict_note": "The clearest counter-example: junior tournament golf fees have been flat-to-down since 2011 \u2014 a large real-terms decline.",
       "mix_2019": {
@@ -341,7 +373,7 @@
         }
       ],
       "range_note": "Rec/town $50\u2013$300/season + $35 USA Lacrosse membership. Club: dues $2,500\u2013$7,000/yr, all-in $5,000\u2013$10,000 (parent-documented log). Equipment is the signature cost: $600\u2013$1,000 to outfit a club player.",
-      "gaps": "Lacrosse was 3STEP's first roll-up sport \u2014 and no before/after pricing at any acquired club has entered the public record. The sport has exactly one national survey point.",
+      "gaps": "Lacrosse was 3STEP's first roll-up sport - and no before/after pricing at any acquired club has entered the public record. One national survey point (2019); the 2024 wave had only 13 lacrosse-primary athletes, too few to publish (primary-verified).",
       "verdict": "unknown",
       "verdict_note": "One data point, and the PE-effect question is untestable with public data \u2014 the gap itself is the finding.",
       "mix_2019": {
@@ -374,7 +406,7 @@
         }
       ],
       "range_note": "USTA junior membership is free; sanctioned entries capped ~$47. The money is court time ($40\u2013$100/hr indoor) and coaching ($60\u2013$150/hr); competitive-track all-in guides run $10,000\u2013$40,000/yr (weakly sourced). Elite anchor: IMG boarding $86,400 (2023) \u2192 ~$93,900 (2025).",
-      "gaps": "Thinnest data of any sport here. No club-level roll-up exists \u2014 PE entered at the academy layer (IMG) only, since an individual sport with public courts offers no league to consolidate.",
+      "gaps": "Thinnest data of any sport here: one survey point, and only 31 tennis-primary athletes in the 2024 wave (primary-verified). No club-level roll-up exists - PE entered at the academy layer (IMG) only, since an individual sport with public courts offers no league to consolidate.",
       "verdict": "unknown",
       "verdict_note": "One data point. Structure suggests why PE skipped it: nothing to roll up.",
       "mix_2019": {
@@ -413,7 +445,7 @@
         }
       ],
       "range_note": "Club season $3,000\u2013$5,000 typical; national/travel teams $4,000\u2013$6,000 before player travel (Cincy Crush: $1,650 regional tier). Qualifier entries ~$1,000/team plus stay-to-play: ~15 room-nights minimum booked through official housing or the team forfeits its spot.",
-      "gaps": "Heavy consolidation (3STEP, LOVB's 77-location network) with essentially no public price history to test it against - one survey point in 2019, nothing since.",
+      "gaps": "Heavy consolidation (3STEP, LOVB's 77-location network) with essentially no public price history to test it against: one survey point in 2019, and only 58 volleyball-primary athletes in the 2024 wave, below the six-sport breakout threshold (primary-verified).",
       "verdict": "unknown",
       "verdict_note": "The stay-to-play mechanics are well documented; their price effect is not. No usable series.",
       "mix_2019": {

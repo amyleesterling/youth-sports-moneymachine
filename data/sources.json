@@ -27,8 +27,8 @@
       "url2": "https://www.aspeninstitute.org/wp-content/uploads/2025/06/National-Youth-Sports-Parent-Survey-FINAL.pdf",
       "year": 2024,
       "method": "parent survey",
-      "methodology": "Nationally representative online survey of 1,848 youth-sports parents (children 6-18), all 50 states + DC, fielded Nov-Dec 2024. Spending on child's primary sport across registration, travel/lodging, equipment, private lessons, camps. Source of the headline '46% increase since 2019 ... twice the rate of price inflation.'",
-      "flag": "excerpt-verified; per-sport appendix beyond baseball/soccer/basketball not retrievable — a real gap noted on the page"
+      "methodology": "Nationally representative online survey of 1,848 youth-sports parents (children 6-18), all 50 states + DC, fielded Nov-Dec 2024. Primary-sport spending table (p.25): registration $196.98, equipment $164.59, travel $278.03, lessons $183.36, camps $148.44, other $42.75, TOTAL $1,015.64 (range $0-$24,600); other-sports spending $528.71. Per-sport breakout (p.114) covers ONLY six sports: basketball $875.97, soccer $910.22, baseball $1,112.50, tackle football $633.72, flag football $444.04, dance $2,048.31. Hockey/golf/lacrosse/tennis/swim/volleyball/cheer were not broken out - their primary-sport counts (16/15/13/31/34/58/58) were too small. Source of the headline '46% increase since 2019 ... twice the rate of price inflation.'",
+      "flag": "primary-verified - full report obtained and read directly; cost-relevant tables reproduced in this repo at data/raw/aspen-2024-parent-survey-excerpt.md"
     },
     "bls_cpi": {
       "short": "BLS CPI-U all items",
