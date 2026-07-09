@@ -1,5 +1,7 @@
 # The Youth Sports Money Machine
 
+**Live site: [amyleesterling.github.io/youth-sports-moneymachine](https://amyleesterling.github.io/youth-sports-moneymachine/)**
+
 A single-page data investigation: how much are US club/travel youth sports costs actually
 rising, and how much of that outruns inflation? Tested sport by sport — soccer, travel
 baseball, competitive cheer, gymnastics, swimming, ice hockey, golf, lacrosse, tennis and
